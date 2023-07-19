@@ -1,30 +1,32 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 
-// import { connect } from "react-redux";
-// import { bindActionCreators } from "redux";
+import { useDispatch } from "react-redux";
 
-// import * as ListActions from "../../store/actions/produtos"
+import * as ListActions from "../../store/actions/produtos"
 
-// const Formulario = ({setProdutos}) => {
+const Formulario = ({}) => {
 
-//   const [nome, setNome] = useState()
-//   const [quantidade, setQuantidade] = useState()
-//   const [preco, setPreco] = useState()
+  const dispatch = useDispatch()
 
-//   function createFormularioDeCadastroDeProdutos(){
-//     return (
-//       <form id='formulario'>
-//         <input type="text" onChange={e => setNome(String(e.target.value))} placeholder='nome'/>
-//         <input type="number" onChange={e => setQuantidade(Number(e.target.value))} placeholder='quantidade'/>
-//         <input type="number" onChange={e => setPreco(Number(e.target.value))} placeholder='preco'/>
-//         <button onClick={e => {e.preventDefault(); setProdutos(nome, quantidade, preco)}}>Salvar</button>
-//       </form>
-//     )
-//   }
+  const [nome, setNome] = useState()
+  const [quantidade, setQuantidade] = useState()
+  const [preco, setPreco] = useState()
 
-//   return (<div>{createFormularioDeCadastroDeProdutos()}</div>);
-// }
+  const onSubmit = e => {
+    e.preventDefault()
+    dispatch(ListActions.setProdutos(nome, quantidade, preco))
+  }
 
-// const mapDispatchToProps = dispatch => bindActionCreators(ListActions, dispatch)
+  return (
+    <div>
+        <form id='Formulario' onSubmit={e => onSubmit(e)}>
+        <input type="text" onChange={e => setNome(String(e.target.value))} placeholder='nome'/>
+        <input type="number" onChange={e => setQuantidade(Number(e.target.value))} placeholder='quantidade'/>
+        <input type="number" onChange={e => setPreco(Number(e.target.value))} placeholder='preço'/>
+        <button>Salvar</button>
+        </form>
+    </div>
+  )
+}
 
-// export default connect(null, mapDispatchToProps)(Formulario)
+export default (Formulario)

@@ -1,23 +1,19 @@
-// import React, { useEffect } from 'react';
+import React from 'react';
 
-// import { connect } from "react-redux";
+import { useSelector } from "react-redux";
+import { selectors } from '../../store/selectors/produtos';
 
-// const Estoque = ({produtos}) => {
+import Item from './Item';
 
-//   function createListaDeProdutos(){
-//       return produtos.map(produto => (
-//         <div key={produto.id}>
-//           <div>{produto.nome}</div>
-//           <div>{produto.quantidade}</div>
-//         </div>)
-//       )
-//   }
+const Estoque = ({}) => {
 
-//   return (<div>{createListaDeProdutos()}</div>);
-// }
+  const produtos = useSelector(selectors.getProdutos)
 
-// const mapStateToProps = state => ({
-//   produtos: state.produtos.produtos,
-// })
+  return (
+    <div>
+        {produtos.map(produto => <Item key={produto.id} produto={produto}/>)}
+    </div>
+  );
+}
 
-// export default connect(mapStateToProps, null)(Estoque)
+export default (Estoque)
