@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Links = () => {
 
   return (
-    <div>
+    <div className='Links'>
         <Link to="/Produtos">Produtos</Link>
         <Link to="/Carrinho">Carrinho</Link>
         <Link to="/Pagamento">Pagamento</Link>

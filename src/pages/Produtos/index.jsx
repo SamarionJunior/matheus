@@ -13,10 +13,10 @@ const Produtos = () => {
   const produtos = useSelector(selectors.getProdutos)
 
   return (
-    <div>
+    <div className='Content'>
       <Links></Links>
       <h1>Produtos</h1>
-      <div>
+      <div className='Lista'>
         
         {produtos.length !== 0 ? 
           produtos.map(produto => (
