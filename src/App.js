@@ -4,17 +4,12 @@ import React from 'react';
 
 import { Routes, Route } from "react-router-dom";
 
-// import { connect, shallowEqual } from "react-redux";
-// import { bindActionCreators } from "redux";
-
-// import * as PokemonActions from "./store/actions/pokemon"
-
-import Produtos from './pages/Produtos/Produtos';
-import Carrinho from './pages/Carrinho/Carrinho';
-import Pagamento from './pages/Pagamento/Pagamento';
-import Pedidos from './pages/Pedidos/Pedidos';
-import Estoque from './pages/Estoque/Estoque';
-import Painel from './pages/Painel/Painel';
+import Produtos from './pages/Produtos';
+import Carrinho from './pages/Carrinho';
+import Pagamento from './pages/Pagamento';
+import Pedidos from './pages/Pedidos';
+import Estoque from './pages/Estoque';
+import Painel from './pages/Painel';
 
 function App() {
   return (
@@ -32,7 +27,3 @@ function App() {
 }
 
 export default App;
-
-// <div className="App">
-
-// </div>

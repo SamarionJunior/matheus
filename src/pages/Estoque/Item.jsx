@@ -4,22 +4,18 @@ import { useDispatch } from "react-redux";
 
 import * as ListActions from "../../store/actions/produtos"
 
-const Item = ({produto}) => {
+const Item = ({item}) => {
 
     const dispatch = useDispatch()
 
     const [isEdicaoHabilitada, setIsEdicaoHabilitada] = useState(false)
 
-    const [id, _ ] = useState(produto.id)
-    const [nome, setNome] = useState(produto.nome)
-    const [preco, setPreco] = useState(produto.preco)
-    const [quantidade, setQuantidade] = useState(produto.quantidade)
+    const id = item.id
+    const [nome, setNome] = useState(item.nome)
+    const [preco, setPreco] = useState(item.preco)
+    const [quantidade, setQuantidade] = useState(item.quantidade)
 
-    const clear = () => {
-        setNome(produto.nome)
-        setPreco(produto.preco)
-        setQuantidade(produto.quantidade)
-    }
+    const clear = () => {setNome(item.nome); setPreco(item.preco); setQuantidade(item.quantidade)}
 
     const change = (callback, tipo, value) => isEdicaoHabilitada ? callback(tipo(value)) : null
 
