@@ -20,11 +20,24 @@ const Produtos = () => {
         
         {produtos.length !== 0 ? 
           produtos.map(produto => (
-            <div key={produto.id}>
-              <div>
-                {produto.nome} {produto.quantidade <= 0 ? <div>(Produto esgotado)</div> : null}
+            <div key={produto.id} className='Item'>
+              <div className='Item-Imagem'/>
+              <div className='Item-Body'>
+                <div className='Item-Body-Title'>
+                  {produto.nome}
+                </div>
+                <div className='Item-Body-Description'>
+                  {produto.descricao}
+                </div>
+                <div className="Item-Body-Footer">
+                  <div className='Item-Body-Price'>
+                    {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
+                  </div>
+                  {produto.quantidade <= 0 ?
+                    <div className='Item-Body-Warning'>(Produto esgotado)</div> : 
+                    <button className='Item-Body-Action' onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>adicionar</button>}
+                </div>
               </div>
-              {produto.quantidade > 0 ? <button onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>adicionar</button> : null}
             </div>
           )) : (
             <div>Nenhum produto no estoque</div>
