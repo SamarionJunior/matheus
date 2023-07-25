@@ -5,6 +5,8 @@ import * as ListActions from "../../store/actions/produtos"
 import { selectors } from '../../store/selectors/produtos';
 
 import Links from '../../components/Links';
+import Title from '../../components/Title';
+import Footer from '../../components/Footer';
 
 const Pagamento = () => {
 
@@ -17,7 +19,9 @@ const Pagamento = () => {
   return (
     <div>
       <Links></Links>
-      <h1>Pagamento</h1>
+      
+      <Title title={"Pagamento"}/>
+
       <div>
 
         {
@@ -39,6 +43,9 @@ const Pagamento = () => {
         }
         
       </div>
+
+      <Footer footer={"Footer"}/>
+
     </div>
   );
 }

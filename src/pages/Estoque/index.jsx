@@ -1,13 +1,15 @@
 import React from 'react';
 
+import { useSelector } from "react-redux";
+import { selectors } from '../../store/selectors/produtos';
+
 import Formulario from './Formulario';
 import Lista from './Lista';
 import Item from './Item';
 
 import Links from '../../components/Links';
-
-import { useSelector } from "react-redux";
-import { selectors } from '../../store/selectors/produtos';
+import Title from '../../components/Title';
+import Footer from '../../components/Footer';
 
 const Estoque = () => {
 
@@ -16,9 +18,14 @@ const Estoque = () => {
   return (
     <div>
       <Links></Links>
-      <h1>Estoque</h1>
+      
+      <Title title={"Estoque"}/>
+
       <Formulario></Formulario>
       <Lista items={produtos} component={<Item/>}/>
+
+      <Footer footer={"Footer"}/>
+
     </div>
   );
 }

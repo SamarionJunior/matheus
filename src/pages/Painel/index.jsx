@@ -5,6 +5,8 @@ import * as ListActions from "../../store/actions/produtos"
 import { selectors } from '../../store/selectors/produtos';
 
 import Links from '../../components/Links';
+import Title from '../../components/Title';
+import Footer from '../../components/Footer';
 
 const Estoque = () => {
 
@@ -16,8 +18,10 @@ const Estoque = () => {
 
   return (
     <div>
-        <Links></Links>
-        <h1>Estoque</h1>
+      <Links></Links>
+      
+      <Title title={"Estoque"}/>
+
         <div>
 
           {newProdutos.length !== 0 ? produtos.map(produto => (
@@ -35,6 +39,9 @@ const Estoque = () => {
           }
 
         </div>
+      
+      <Footer footer={"Footer"}/>
+
     </div>
   );
 }

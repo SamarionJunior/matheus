@@ -4,6 +4,8 @@ import { useSelector} from "react-redux";
 import { selectors } from '../../store/selectors/produtos';
 
 import Links from '../../components/Links';
+import Title from '../../components/Title';
+import Footer from '../../components/Footer';
 
 const Pedidos = () => {
 
@@ -14,7 +16,9 @@ const Pedidos = () => {
   return (
     <div>
       <Links></Links>
-      <h1>Pedidos</h1>
+      
+      <Title title={"Pedidos"}/>
+
       <div>
 
         {
@@ -29,6 +33,9 @@ const Pedidos = () => {
         }
 
       </div>
+
+      <Footer footer={"Footer"}/>
+
     </div>
   );
 }

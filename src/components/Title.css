@@ -1,0 +1,13 @@
+.Title{
+    font-size: 3rem;
+    height: 5rem;
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    top: 5rem;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
