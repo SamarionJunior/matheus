@@ -7,6 +7,7 @@ import { selectors } from '../../store/selectors/produtos';
 import Links from '../../components/Links';
 import Title from '../../components/Title';
 import Footer from '../../components/Footer';
+import Warning from '../../components/Warning';
 
 const Produtos = () => {
 
@@ -46,7 +47,7 @@ const Produtos = () => {
                 </div>
               </div>
             )) : (
-              <div>Nenhum produto no estoque</div>
+              <Warning text={"Nenhum produto no estoque"}/>
             )
           }
         

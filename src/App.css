@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
+  transition: all 0.3s ease;
 }
 
 body{
@@ -31,7 +32,9 @@ body{
 
 .contl{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,13 +47,365 @@ body{
   padding-bottom: 5rem;
 }
 
+.contlCarrinho{
+  height: calc(100vh - 10rem - 5rem - 5rem);
+}
+
+.contlEstoque{
+  padding-top: 20rem;
+  height: calc(100vh - 10rem - 5rem - 10rem);
+}
+
+.Form{
+  z-index: 99999;
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.Formulario{
+  width: 100%;
+  max-width: 1080px;
+  height: calc(100% - 2rem);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem 0;
+}
+
+.Formulario > *{
+  padding: 1rem;
+  margin-right: 1rem;
+  flex-grow: 1;
+}
+
+.Formulario > *:last-child{
+  margin-right: 0;
+}
+
 .Lista{
+  min-width: 1080px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   overflow: auto;
+}
+
+.ItemEstoque{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
+.ItemEstoque > *{
+  height: 30px;
+  margin-right: 1rem;
+  flex-grow: 1;
+  
+}
+
+.ItemEstoque > *:last-child{
+  margin-right: 0;
+}
+
+.ItemEstoque-Button{
+  min-width: 15rem;
+  height: 5rem;
+  padding: 0 2rem;
+
+  background-color: black;
+  color: white;
+
+  border: none;
+  border: 3px solid black;
+
+  font-weight: bolder;
+}
+
+.ItemEstoque-Button:hover{
+  background-color: white;
+  color: black;
+}
+
+.ItemEstoque-Button:active{
+  background-color: black;
+  color: white;
+}
+
+.ItemEstoque-Button:disabled{
+  background-color: gray;
+  color: white;
+  border: 3px solid gray;
+}
+
+
+/* .ItemEstoque-Input{
+
+} */
+
+.ItemPainel{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ItemPainel > *{
+  margin-right: 1rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ItemPainel-Imagem{
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ItemPainel-Nome{
+  flex-grow: 1;
+  justify-content: flex-start;
+  text-transform: uppercase;
+}
+
+.ItemPainel-Quantidade{
+  padding: 0 2rem;
+}
+
+.ItemPainel-Status{
+  min-width: 10rem;
+  padding: 0 2rem;
+  justify-content: flex-start;
+}
+
+.ItemPainel-Actions{
+  min-width: 15rem;
+  height: 5rem;
+  padding: 0 2rem;
+
+  background-color: black;
+  color: white;
+
+  border: none;
+  border: 3px solid black;
+
+  font-weight: bolder;
+}
+
+.ItemPainel-Actions:hover{
+  background-color: white;
+  color: black;
+}
+
+.ItemPainel-Actions:active{
+  background-color: black;
+  color: white;
+}
+
+
+.Pedidos{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Pedidos-Nome{
+  flex-grow: 1;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.Pedidos-Quantidade{
+  min-width: 5rem;
+  height: 100%;
+  margin-right: 1rem;
+}
+
+.Pedidos-Status{
+  height: 100%;
+  margin-right: 1rem;
+}
+
+
+/* .ListaCarrinho{
+  
+} */
+
+.ItemCarrinho{
+  width: calc(100%);
+  height: 10rem;
+  padding: 1rem 0;
+  padding-right: 1rem;
+  /* margin-bottom: 2.5rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* cursor: pointer; */
+}
+
+.ItemCarrinho-Imagem{
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ItemCarrinho-Title{
+  padding-left: 1rem;
+
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  font-size: 2rem;
+  /* margin: 0.5rem 0; */
+
+  text-transform: uppercase;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+
+.ItemCarrinho-Quantidade{
+  min-width: 5rem;
+  min-height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ItemCarrinho-Actions{
+  width: 4rem;
+  height: 4rem;
+
+  background-color: black;
+  color: white;
+
+  font-weight: bolder;
+  text-transform: uppercase;
+
+  border: none;
+  
+  border: 3px solid black;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.ItemCarrinho-Actions:hover{
+  background-color: white;
+  color: black;
+}
+
+.ItemCarrinho-Actions:active{
+  background-color: black;
+  color: white;
+}
+
+.Actions{
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  bottom: 5rem;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.Actions > button{
+  width: 100%;
+  max-width: calc(540px - 0.5rem);
+  height: calc(5rem - 2 * 0.5rem);
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+.Actions > button:first-child{
+  margin-right: 1rem;
+}
+
+.Actions > button:hover{
+  background-color: white;
+  color: black;
+}
+
+.Actions > button:active{
+  background-color: black;
+  color: white;
+}
+
+.Warning-Txt{
+  font-size: 5rem;
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  margin-right: calc((100% - 1080px) / 2);
+  margin-left: calc((100% - 1080px) / 2);
+  border: 1px solid black;
+  width: 100%;
+  max-width: 1080px;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Item{

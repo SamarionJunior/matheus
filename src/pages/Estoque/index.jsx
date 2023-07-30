@@ -22,7 +22,12 @@ const Estoque = () => {
       <Title title={"Estoque"}/>
 
       <Formulario></Formulario>
-      <Lista items={produtos} component={<Item/>}/>
+      
+      <div className="contl contlEstoque">
+
+        <Lista items={produtos} component={<Item/>}/>
+
+      </div>
 
       <Footer footer={"Footer"}/>
 

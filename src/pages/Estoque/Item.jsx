@@ -20,22 +20,23 @@ const Item = ({item}) => {
     const change = (callback, tipo, value) => isEdicaoHabilitada ? callback(tipo(value)) : null
 
     return (
-        <div>
-            <input type="text" value={nome} onChange={(e) => change(setNome, String, e.target.value)}/>
-            <input type="number" value={preco} onChange={(e) => change(setPreco, Number, e.target.value)}/>
-            <input type="number" value={quantidade} onChange={(e) => change(setQuantidade, Number, e.target.value)}/>
+        <div className='ItemEstoque'>
+            <div className='ItemCarrinho-Imagem'/>
+            <input className='ItemEstoque-Input' type="text" value={nome} onChange={(e) => change(setNome, String, e.target.value)}/>
+            <input className='ItemEstoque-Input' type="number" value={preco} onChange={(e) => change(setPreco, Number, e.target.value)}/>
+            <input className='ItemEstoque-Input' type="number" value={quantidade} onChange={(e) => change(setQuantidade, Number, e.target.value)}/>
             {!isEdicaoHabilitada ? 
-                <div>
-                    <button onClick={(e) => {setIsEdicaoHabilitada(true)}}>Habilitar Edição</button>
-                    <button disabled>Salvar Edição</button>
-                    <button disabled>Apagar</button>
-                </div>
+                <>
+                    <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(true)}}>Habilitar Edição</button>
+                    <button className='ItemEstoque-Button' disabled>Salvar Edição</button>
+                    <button className='ItemEstoque-Button' disabled>Apagar</button>
+                </>
                     : 
-                <div>
-                    <button onClick={(e) => {setIsEdicaoHabilitada(false); clear() }}>Cancelar Edição</button>
-                    <button onClick={(e) => {dispatch(ListActions.setProdutosById(id, nome, quantidade, preco))}}>Salvar Edição</button>
-                    <button onClick={(e) => {dispatch(ListActions.deleteProdutoById(id));}}>Apagar</button>
-                </div>
+                <>
+                    <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(false); clear() }}>Cancelar Edição</button>
+                    <button className='ItemEstoque-Button' onClick={(e) => {dispatch(ListActions.setProdutosById(id, nome, quantidade, preco))}}>Salvar Edição</button>
+                    <button className='ItemEstoque-Button' onClick={(e) => {dispatch(ListActions.deleteProdutoById(id));}}>Apagar</button>
+                </>
             }
         </div>
     );

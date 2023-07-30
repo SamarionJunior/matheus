@@ -19,18 +19,23 @@ const Pedidos = () => {
       
       <Title title={"Pedidos"}/>
 
-      <div>
+      <div className="contl">
 
-        {
-          isNosPedidos.length !== 0 ?
-            isNosPedidos.map(produto => (
-              <div key={produto.id}>
-                <div>{produto.nome}</div>
-                <div>{produto.NosPedidos}</div>
-                <div>{produto.status}</div>
-              </div>
-            )) : null
-        }
+        <div className="Lista">
+
+          {
+            isNosPedidos.length !== 0 ?
+              isNosPedidos.map(produto => (
+                <div key={produto.id} className='Pedidos'>
+                  <div className='ItemCarrinho-Imagem'/>
+                  <div className='Pedidos-Nome'>{produto.nome}</div>
+                  <div className='Pedidos-Quantidade'>{produto.NosPedidos}</div>
+                  <div className='Pedidos-Status'>{produto.status}</div>
+                </div>
+              )) : null
+          }
+
+        </div>
 
       </div>
 

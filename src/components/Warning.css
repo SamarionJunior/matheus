@@ -1,0 +1,15 @@
+.Warning-Txt{
+    font-size: 5rem;
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    margin-right: calc((100% - 1080px) / 2);
+    margin-left: calc((100% - 1080px) / 2);
+    border: 1px solid black;
+    width: 100%;
+    max-width: 1080px;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
