@@ -1,48 +1,29 @@
-import React from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import './style.css'
 
-import * as ListActions from "../../store/actions/produtos"
-import { selectors } from '../../store/selectors/produtos';
+import React from 'react';
 
 import Links from '../../components/Links';
 import Title from '../../components/Title';
 import Footer from '../../components/Footer';
 
+import SelectPay from './components/SelectPay';
+import Actions from './components/Actions';
+import List from './components/List';
+
 const Pagamento = () => {
-
-  const dispatch = useDispatch()
-
-  const produtos = useSelector(selectors.getProdutos)
-
-  const isEmProcessamento = produtos.filter(produto => produto.emProcessoDePagamento > 0)
 
   return (
     <div>
-      <Links></Links>
+      
+      <Links/>
       
       <Title title={"Pagamento"}/>
 
-      <div>
+      <SelectPay/>
 
-        {
-          isEmProcessamento.length !== 0 ? 
-          isEmProcessamento.map(produto => (
-              <div key={produto.id}>
-                <div>{produto.nome}</div>
-                <div>{produto.emProcessoDePagamento}</div>
-                <div>{produto.emProcessoDePagamento * produto.preco}</div>
-              </div>
-            )) : null
-        }
+      <List/>
 
-        {
-          isEmProcessamento.length !== 0 ? (<>
-            <button onClick={e => dispatch(ListActions.setPedidos(produtos))}>adicionar</button>
-            <button onClick={e => dispatch(ListActions.getPagamento(produtos))}>cancelar</button>
-          </>) : null
-        }
-        
-      </div>
+      <Actions/>
 
       <Footer footer={"Footer"}/>
 

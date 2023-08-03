@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import { useDispatch } from "react-redux";
 
-import * as ListActions from "../../store/actions/produtos"
+import * as ListActions from "../../../store/actions/produtos"
 
-const Formulario = ({}) => {
+const Formulario = () => {
 
   const dispatch = useDispatch()
 
@@ -29,4 +29,4 @@ const Formulario = ({}) => {
   )
 }
 
-export default (Formulario)
+export default Formulario
