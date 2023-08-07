@@ -16,7 +16,7 @@ const List = () => {
   return (
       <div className="contl contlCarrinho">
 
-        <div className="Lista ListaCarrinho">
+        <div className="Lista ListaColumn">
 
           {
             isNoCarrinho.length !== 0 ? 

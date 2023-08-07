@@ -1,88 +1,64 @@
-
-
 .contlCarrinho{
+  padding-bottom: 10rem;
     height: calc(100vh - 10rem - 5rem - 5rem);
 }
 
-  .ItemCarrinho{
-    width: calc(100%);
-    height: 10rem;
-    padding: 1rem 0;
-    padding-right: 1rem;
-    /* margin-bottom: 2.5rem; */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    /* cursor: pointer; */
+  .ItemBodyCarrinho{
+    width: calc(1080px - 120px);
   }
+
+    .ItemBodyCarrinhoTitle{
+      width: calc(100% - 25rem);
+    }
   
-  .ItemCarrinho-Imagem{
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: url("https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+      .ItemTitleCarrinho{
+        width: 100%;
+      }
   
-  .ItemCarrinho-Title{
-    padding-left: 1rem;
-  
-    flex-grow: 1;
-  
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  
-    font-size: 2rem;
-    /* margin: 0.5rem 0; */
-  
-    text-transform: uppercase;
-  
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden; 
-  }
-  
-  .ItemCarrinho-Quantidade{
-    min-width: 5rem;
-    min-height: 5rem;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ItemCarrinho-Actions{
-    width: 4rem;
-    height: 4rem;
-  
-    background-color: black;
-    color: white;
-  
-    font-weight: bolder;
-    text-transform: uppercase;
-  
-    border: none;
-    
-    border: 3px solid black;
-  
-    border-radius: 50%;
-  
-    cursor: pointer;
-  }
-  
-  .ItemCarrinho-Actions:hover{
-    background-color: white;
-    color: black;
-  }
-  
-  .ItemCarrinho-Actions:active{
-    background-color: black;
-    color: white;
-  }
+    .ItemBodyCarrinhoDescription{
+      width: 10rem;
+    }
+
+    .ItemBodyCarrinhoActions{
+      width: 15rem;
+    }
+
+      .ItemCarrinho-Quantidade{
+        width: 5rem;
+
+        text-align: center;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        -webkit-box-orient: vertical; 
+      }
+      
+      .ItemCarrinho-Actions{
+        width: 5rem;
+        height: 5rem;
+      
+        background-color: black;
+        color: white;
+      
+        font-weight: bolder;
+        text-transform: uppercase;
+      
+        border: none;
+        
+        border: 3px solid black;
+      
+        border-radius: 50%;
+      
+        cursor: pointer;
+      }
+      
+      .ItemCarrinho-Actions:hover{
+        background-color: white;
+        color: black;
+      }
+      
+      .ItemCarrinho-Actions:active{
+        background-color: black;
+        color: white;
+      }

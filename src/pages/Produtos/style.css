@@ -1,0 +1,106 @@
+.ItemBody{
+width: 100%;
+height: 100px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: flex-start;
+}
+
+    .ItemTitleProdutos{
+        width: 100%;
+        
+        margin: 0.5rem 0;
+
+        /* text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;  */
+    }
+
+        .ItemBodyDescription{
+        font-size: 1.6rem;
+        margin: 0.5rem 0;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        -webkit-box-orient: vertical; 
+    }
+
+    .ItemBodyFooter{
+    margin-top: 0.5rem;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+
+        .ItemBodyPrice{
+        height: 100%;
+        width: calc(50% - 0.5rem);
+        margin-right: 1rem;
+        font-size: 1.6rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; 
+        /* margin: 0.5rem 0; */
+        }
+
+        .ItemBodyWarning{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: calc(50% - 0.5rem);
+
+        background-color: black;
+        color: white;
+
+        font-size: 1.2rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+
+        border: none;
+
+        height: 100%;
+
+        flex-grow: 1;
+        }
+
+        .ItemBodyAction{
+        width: calc(50% - 0.5rem);
+
+        background-color: black;
+        color: white;
+
+        font-weight: bolder;
+        text-transform: uppercase;
+
+        border: none;
+
+        border: 3px solid black;
+
+        height: 100%;
+
+        flex-grow: 1;
+
+        cursor: pointer;
+        }
+
+        .ItemBodyAction:hover{
+        background-color: white;
+        color: black;
+        }
+
+        .ItemBodyAction:active{
+        background-color: black;
+        color: white;
+        }

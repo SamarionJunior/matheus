@@ -1,31 +1,34 @@
-import Style from '../style.module.css'
+import '../style.css'
 
 import React from 'react';
 import { useDispatch } from "react-redux";
 
 import * as ListActions from "../../../store/actions/produtos"
 
+import {ImageMedium} from '../../../components/Image';
+
 const Item = ({produto}) => {
 
   const dispatch = useDispatch()
 
   return (
-    <div key={produto.id} className={Style.Item}>
-        <div className={Style.ItemImagem}/>
-        <div className={Style.ItemBody}>
-            <div className={Style.ItemBodyTitle}>
-            {produto.nome}
+    <div key="id" className="Item ItemCell">
+        <ImageMedium/>
+        <div className="ItemBody">
+            <div className="ItemTitle ItemTitleProdutos">
+              {produto.nome}
             </div>
-            <div className={Style.ItemBodyDescription}>
-            {produto.descricao}
+            <div className="ItemBodyDescription">
+              {produto.descricao}
             </div>
-            <div className={Style.ItemBodyFooter}>
-            <div className={Style.ItemBodyPrice}>
+            <div className="ItemBodyFooter">
+              <div className="ItemBodyPrice">
                 {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
-            </div>
-            {produto.quantidade <= 0 ?
-                <div className={Style.ItemBodyWarning}>(Produto esgotado)</div> : 
-                <button className={Style.ItemBodyAction} onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>adicionar</button>}
+              </div>
+              {produto.quantidade <= 0 ?
+                <div className="ItemBodyWarning">(Produto esgotado)</div> : 
+                <button className="ItemBodyAction" onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>adicionar</button>
+              }
             </div>
         </div>
     </div>

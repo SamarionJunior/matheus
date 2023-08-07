@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
 
+import Item from './Item';
+
 const List = () => {
 
   const produtos = useSelector(selectors.getProdutos)
@@ -11,19 +13,13 @@ const List = () => {
 
   return (
 
-    <div className="contl contlCarrinho contlPagamento">
+    <div className="contl contlPagamento">
 
-        <div className="Lista ListaCarrinho ListaPagamento">
+        <div className="Lista ListaColumn">
 
-            {
-            isEmProcessamento.length !== 0 ? 
-            isEmProcessamento.map(produto => (
-                <div className='ItemCarrinho' key={produto.id}>
-                    <div className='ItemCarrinho-Imagem'/>
-                    <div className='ItemCarrinho-Title'>{produto.nome}</div>
-                    <div className='ItemCarrinho-Quantidade'>{produto.emProcessoDePagamento}</div>
-                    <div className='ItemCarrinho-Quantidade'>{(produto.emProcessoDePagamento * produto.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
-                </div>
+            {isEmProcessamento.length !== 0 ? 
+              isEmProcessamento.map(produto => (
+                  <Item produto={produto}/>
                 )) : null
             }
         

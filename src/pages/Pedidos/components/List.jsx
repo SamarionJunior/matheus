@@ -3,6 +3,8 @@ import { useSelector} from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
 
+import Item from './Item';
+
 const List = () => {
 
   const produtos = useSelector(selectors.getProdutos)
@@ -13,23 +15,14 @@ const List = () => {
 
     <div className="contl">
 
-        <div className="Lista">
+      <div className="Lista ListaColumn">
 
-            {
-            
-                isNosPedidos.length !== 0 ?
-                    isNosPedidos.map(produto => (
-                    <div key={produto.id} className='Pedidos'>
-                        <div className='ItemCarrinho-Imagem'/>
-                        <div className='Pedidos-Nome'>{produto.nome}</div>
-                        <div className='Pedidos-Quantidade'>{produto.NosPedidos}</div>
-                        <div className='Pedidos-Status'>{produto.status}</div>
-                    </div>
-                    )) : null
-                    
-            }
+        {isNosPedidos.length !== 0 ?
+          isNosPedidos.map(produto => (
+            <Item produto={produto}/>
+          )) : null}
 
-        </div>
+      </div>
 
     </div>
 

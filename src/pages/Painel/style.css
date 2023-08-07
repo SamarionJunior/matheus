@@ -31,58 +31,39 @@
     margin-right: 0;
   }
 
-  .ItemPainel{
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
   
-  .ItemPainel > *{
-    margin-right: 1rem;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .ItemBodyPainel{
+    width: calc(1080px - 120px);
   }
+
+    .ItemBodyPainelTitle{
+      width: calc(100% - 65rem - 100px);
+    }
   
-  .ItemPainel-Imagem{
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-image: url("https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+      .ItemTitlePainel{
+        width: 100%;
+      }
+
+    .ItemBodyPainelDescription{
+      width: 10rem;
+    }
+
+    .ItemBodyPainelActions{
+      width: calc(45rem + 40px);
+    }
   
-  .ItemPainel-Nome{
-    flex-grow: 1;
-    justify-content: flex-start;
-    text-transform: uppercase;
-  }
-  
-  .ItemPainel-Quantidade{
-    padding: 0 2rem;
-  }
-  
-  .ItemPainel-Status{
-    min-width: 10rem;
-    padding: 0 2rem;
-    justify-content: flex-start;
-  }
+    .ItemBodyPainelActions > *{
+      margin-right: 2rem;
+    }
+    
+    .ItemBodyPainelActions > *:last-child{
+      margin-right: 0;
+    }
   
   .ItemPainel-Actions{
-    min-width: 15rem;
+    width: 15rem;
     height: 5rem;
-    padding: 0 2rem;
   
     background-color: black;
     color: white;

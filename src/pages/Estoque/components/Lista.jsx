@@ -6,7 +6,7 @@ const Estoque = ({items, component}) => {
       
     <div className="contl contlEstoque">
 
-      <div className='Lista'>
+      <div className='Lista ListaColumn'>
 
         {items.map(item => cloneElement(component, {item: item, key: item.id}))}
 

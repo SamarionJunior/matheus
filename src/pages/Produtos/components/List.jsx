@@ -1,3 +1,5 @@
+import '../style.css'
+
 import React from 'react';
 import { useSelector } from "react-redux";
 
@@ -14,7 +16,7 @@ const List = () => {
   return (
       <div className="contl">
 
-        <div className='Lista'>
+        <div className="Lista ListaCell">
           
           {produtos.length !== 0 ? 
             produtos.map(produto => (

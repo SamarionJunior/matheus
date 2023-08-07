@@ -17,7 +17,7 @@ const List = () => {
 
       <div className="contl">
 
-        <div className="Lista">
+        <div className="Lista ListaColumn">
 
             {newProdutos.length !== 0 ? 
                 produtos.map(produto => 

@@ -1,51 +1,67 @@
 .contlPagamento{
-    padding-top: 20rem;
-    height: calc(100vh - 10rem - 5rem - 5rem - 5rem - 5rem);
+  padding-top: 20rem;
+  padding-bottom: 10rem;
+  height: calc(100vh - 10rem - 5rem - 5rem - 5rem - 5rem);
+}
+
+.ItemBodyPagamento{
+  width: calc(1080px - 120px);
+}
+
+  .ItemBodyPagamentoTitle{
+    width: calc(100% - 30rem - 60px);
   }
 
-  .SelectPay{
-    z-index: 9999;
-    position: fixed;
-    top: 10rem;
-    left: 0;
-    padding-left: calc((100% - 1080px) / 2);
-    padding-right: calc((100% - 1080px) / 2);
-    height: 10rem;
-    max-width: 1080px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .SelectPay > *{
-    font-weight: bolder;
-    text-transform: uppercase;
-    flex-grow: 1;
-    margin-right: 2rem;
-    height: calc(100% - 2rem);
-    margin-bottom: 2rem;
-  
-    background-color: black;
-    color: white;
-    border: 3px solid black;
-  }
-  
-  .SelectPay > *:last-child{
-    margin-right: 0;
-  }
-  
-  .SelectPay > *:hover{
-    background-color: white;
-    color: black;
-  }
-  
-  .SelectPay > *:active{
-    background-color: black;
-    color: white;
+    .ItemTitlePagamento{
+      width: 100%;
+    }
+
+  .ItemBodyPagamentoDescription{
+    width: 10rem;
   }
 
-  .ListaPagamento{
-    flex-direction: column;
-    flex-wrap: nowrap;
+  .ItemBodyPagamentoActions{
+    width: 15rem;
   }
+
+.SelectPay{
+  z-index: 9999;
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  padding-left: calc((100% - 1080px) / 2);
+  padding-right: calc((100% - 1080px) / 2);
+  height: 10rem;
+  max-width: 1080px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SelectPay > *{
+  font-weight: bolder;
+  text-transform: uppercase;
+  flex-grow: 1;
+  margin-right: 2rem;
+  height: calc(100% - 2rem);
+  margin-bottom: 2rem;
+
+  background-color: black;
+  color: white;
+  border: 3px solid black;
+}
+
+.SelectPay > *:last-child{
+  margin-right: 0;
+}
+
+.SelectPay > *:hover{
+  background-color: white;
+  color: black;
+}
+
+.SelectPay > *:active{
+  background-color: black;
+  color: white;
+}
