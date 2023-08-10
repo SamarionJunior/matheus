@@ -6,7 +6,9 @@ const Footer = (props) => {
 
   return (
     <div className='Footer'>
+      <div className="Content">
         {props.footer}
+      </div>
     </div>
   );
 }

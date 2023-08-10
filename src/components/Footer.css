@@ -1,7 +1,8 @@
 .Footer{
-    /* max-width: 100vw; */
-    width: 100%;
+    width: calc(100% - (100% - 1024px));
     height: 5rem;
+    padding-right: calc((100% - 1024px) / 2);
+    padding-left: calc((100% - 1024px) / 2);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -11,5 +12,88 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    /* background-color: black; */
+}     
+ 
+@media (max-width: 1024px){
+  .Footer{
+    width: calc(100%);
+    height: 5rem;
+    padding-right: 0;
+    padding-left: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }     
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
+}
+
+.Content{
+  width: 1024px;
+  min-width: 1024px;
+  max-width: 1024px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px){
+  .Content{
+    width: 100%;
+    min-width: 320px;
+    max-width: 1024px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
   }
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
+}
+
+      @media (max-width: 1024px){
+          
+      }
+
+      @media (max-width: 768px){
+          
+      }
+
+      @media (max-width: 480px){
+          
+      }
+
+      @media (max-width: 320px){
+          
+      }

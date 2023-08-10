@@ -5,6 +5,8 @@ import { selectors } from '../../../store/selectors/produtos';
 
 import Item from './Item';
 
+import Warning from '../../../components/Warning';
+
 const List = () => {
 
   const produtos = useSelector(selectors.getProdutos)
@@ -20,7 +22,7 @@ const List = () => {
             {isEmProcessamento.length !== 0 ? 
               isEmProcessamento.map(produto => (
                   <Item produto={produto}/>
-                )) : null
+                )) : <Warning text={"Nenhum produto para pagamento"} newValue="20rem"/>
             }
         
         </div>

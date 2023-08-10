@@ -1,5 +1,7 @@
 import React, { cloneElement } from 'react';
 
+import Warning from '../../../components/Warning';
+
 const Estoque = ({items, component}) => {
 
   return (
@@ -8,7 +10,10 @@ const Estoque = ({items, component}) => {
 
       <div className='Lista ListaColumn'>
 
-        {items.map(item => cloneElement(component, {item: item, key: item.id}))}
+        {items.length !== 0 ?
+          items.map(item => 
+            cloneElement(component, {item: item, key: item.id})
+          ) : <Warning text={"Nenhum produto no estoque"} newValue="20rem"/>}
 
       </div>
 

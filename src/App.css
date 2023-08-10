@@ -10,6 +10,7 @@
   text-decoration: none;
   border: none;
   border-radius: 0;
+  box-shadow: none;
   transition: all 0.3s ease;
 }
 
@@ -34,21 +35,68 @@ body{
   top: 0;
   left: 0;
   z-index: 999;
-  width: calc(100% - (100% - 1080px));
+  width: calc(100% - (100% - 1024px));
   height: calc(100vh - 10rem - 5rem);
   padding-top: 10rem;
-  padding-left: calc((100% - 1080px) / 2);
-  padding-right: calc((100% - 1080px) / 2);
+  padding-left: calc((100% - 1024px) / 2);
+  padding-right: calc((100% - 1024px) / 2);
   padding-bottom: 5rem;
+}
+
+@media (max-width: 1024px){
+  .contl{
+    width: calc(100%);
+    height: calc(100vh - 10rem - 5rem);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
 }
 
 .Lista{
   height: 100%;
   width: 100%;
-  max-width: 1080px;
+  max-width: 1024px;
+  min-width: 1024px;
+  /* min-width: 320px; */
   display: flex;
   align-items: flex-start;
   /* overflow: auto; */
+}
+
+@media (max-width: 1024px){
+  .Lista{
+    height: 100%;
+    width: calc(100% - 2rem);
+    max-width: calc(1024px - 2rem);
+    min-width: calc(320px - 2rem);
+    display: flex;
+    align-items: flex-start;
+    /* overflow: auto; */
+  }
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
 }
 
 .ListaCell{
@@ -78,9 +126,25 @@ body{
 
 .ItemCell{
   flex-direction: column;
-  width: calc(270px - (2 * 1rem));
+  width: calc(100% );
   height: 300px;
   margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1024px){
+          
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
 }
 
 .ItemCollumn{
@@ -184,9 +248,9 @@ body{
 }
 
 .Actions{
-  width: calc(100% - (100% - 1080px));
-  padding-left: calc((100% - 1080px) / 2);
-  padding-right: calc((100% - 1080px) / 2);
+  width: calc(100% - (100% - 1024px));
+  padding-left: calc((100% - 1024px) / 2);
+  padding-right: calc((100% - 1024px) / 2);
   height: 5rem;
   position: fixed;
   bottom: 5rem;
@@ -199,16 +263,73 @@ body{
   align-items: center;
 }
 
+@media (max-width: 1024px){
+  .Actions{
+    width: calc(100%);
+    padding-left: 0;
+    padding-right: 0;
+    height: 5rem;
+    position: fixed;
+    bottom: 5rem;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
+}
+
 .Buttons{
-  width: 1080px;
-  min-width: 1080px;
-  max-width: 1080px;
+  width: 1024px;
+  min-width: 1024px;
+  max-width: 1024px;
   height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1024px){
+  .Buttons{
+    width: calc(100% - 2rem);
+    min-width: calc(320px - 2rem);
+    max-width: calc(1024px - 2rem);
+    height: 100%;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
 }
 
 .Buttons > button{
@@ -243,18 +364,34 @@ body{
   color: white;
 }
 
-.Warning-Txt{
+@media (max-width: 1024px){
+          
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
+
+@media (max-width: 320px){
+    
+}
+
+/* .Warning-Txt{
   font-size: 5rem;
   position: fixed;
   top: 10rem;
   left: 0;
-  margin-right: calc((100% - 1080px) / 2);
-  margin-left: calc((100% - 1080px) / 2);
+  margin-right: calc((100% - 1024px) / 2);
+  margin-left: calc((100% - 1024px) / 2);
   border: 1px solid black;
   width: 100%;
-  max-width: 1080px;
+  max-width: 1024px;
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */

@@ -20,10 +20,10 @@ const Formulario = () => {
   return (
     <div className='Form'>
         <form className='Formulario' id='Formulario' onSubmit={e => onSubmit(e)}>
-          <input type="text" onChange={e => setNome(String(e.target.value))} placeholder='nome'/>
-          <input type="number" onChange={e => setQuantidade(Number(e.target.value))} placeholder='quantidade'/>
-          <input type="number" onChange={e => setPreco(Number(e.target.value))} placeholder='preço'/>
-          <button>Salvar</button>
+          <input className="FormularioImput FormularioImputTitle" type="text" onChange={e => setNome(String(e.target.value))} placeholder='nome'/>
+          <input className="FormularioImput" type="number" onChange={e => setQuantidade(Number(e.target.value))} placeholder='quantidade'/>
+          <input className="FormularioImput" type="number" onChange={e => setPreco(Number(e.target.value))} placeholder='preço'/>
+          <button className="FormularioImput FormularioImputButton">Salvar</button>
         </form>
     </div>
   )

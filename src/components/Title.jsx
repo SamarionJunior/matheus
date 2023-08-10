@@ -5,7 +5,13 @@ import React from 'react';
 const Title = (props) => {
 
   return (
-    <h1 className='Title'>{props.title}</h1>
+    <div className="Title">
+      <div className='Content'>
+        <h1 className='TitleH1'>
+          {props.title}
+        </h1>
+      </div>
+    </div>
   );
 }
 

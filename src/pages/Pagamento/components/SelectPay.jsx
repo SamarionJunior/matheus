@@ -5,11 +5,11 @@ const SelectPay = () => {
   return (
 
     <div className='SelectPay'>
-
-        <button>Dinheiro</button>
-        <button>Pix</button>
-        <button>Boleto</button>
-        
+      <div className="SelectPayContent">
+        <button className='SelectPayButton'>Dinheiro</button>
+        <button className='SelectPayButton'>Pix</button>
+        <button className='SelectPayButton'>Boleto</button>
+      </div>
     </div>
 
   );
