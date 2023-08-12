@@ -123,6 +123,28 @@ export default function produtos(state = INITIAL_STATE, action){
             produtos: [...newCarrinho]
         }
     }
+    if(action.type === 'CLEAR_CARRINHO_BY_ID'){
+
+        const stateProdutos = state.produtos
+        const actionId = action.id
+        
+        const auxCarrinho = stateProdutos.map(produto => {
+            if(produto.id === actionId){
+                if(produto.noCarrinho > 0){
+                    produto.quantidade += produto.noCarrinho
+                    produto.noCarrinho = 0
+                }
+            }
+            return produto
+        })
+
+        const newCarrinho = Object.assign([], auxCarrinho);
+
+        return {
+            ...state,
+            produtos: [...newCarrinho]
+        }
+    }
     if(action.type === 'CLEAR_CARRINHO'){
 
         const stateProdutos = state.produtos

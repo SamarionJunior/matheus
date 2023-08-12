@@ -1,13 +1,29 @@
-.ItemTitlePedidos{
-  width: calc(1024px - 33rem);
+.contlPedidos{
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  height: calc(100vh - 10rem - 5rem);
+}
+
+@media (max-width: 1024px){
+  .contlPedidos{
+    padding-top: 10rem;
+    padding-bottom: 0rem;
+    height: calc(100vh - 10rem);
+  }
 }
 
 .ItemBodyPedidos{
-  width: calc(1024px - 120px);
+  width: calc(100% - 120px);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
   .ItemBodyPedidosTitle{
-    width: calc(100% - 20rem - 40px);
+    width: 100%;
   }
 
     .ItemTitlePagamento{
@@ -15,9 +31,9 @@
     }
 
   .ItemBodyPedidosDescription{
-    width: 10rem;
+    width: 100%;
   }
 
-  .ItemBodyPedidosActions{
+  /* .ItemBodyPedidosActions{
     width: 15rem;
-  }
+  } */

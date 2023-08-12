@@ -14,7 +14,7 @@ const Actions = () => {
 
   return (
 
-      <div className="Actions">
+      <div className="Actions ActionsPagamento">
 
         <div className="Buttons">
 

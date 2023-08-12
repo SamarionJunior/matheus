@@ -46,6 +46,13 @@ export function getCarrinho(id){
     }
 }
 
+export function clearCarrinhoById(id){
+    return {
+        type: "CLEAR_CARRINHO_BY_ID",
+        id
+    }
+}
+
 export function clearCarrinho(id){
     return {
         type: "CLEAR_CARRINHO",

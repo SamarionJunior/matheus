@@ -15,7 +15,7 @@ const List = () => {
 
   return (
 
-      <div className="contl">
+      <div className="contl contlPainel">
 
         <div className="Lista ListaColumn">
 

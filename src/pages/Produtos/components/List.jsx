@@ -1,4 +1,4 @@
-import '../style.css'
+// import '../style.css'
 
 import React from 'react';
 import { useSelector } from "react-redux";
@@ -14,7 +14,7 @@ const List = () => {
   const produtos = useSelector(selectors.getProdutos)
 
   return (
-      <div className="contl">
+      <div className="contl contlProdutos">
 
         <div className="Lista ListaCell">
           

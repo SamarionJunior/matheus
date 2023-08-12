@@ -17,12 +17,15 @@ const Item = ({produto}) => {
             <div className='ItemTitle ItemTitleCarrinho'>{produto.nome}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyCarrinhoDescription">
-            <div className='ItemCarrinho-Quantidade'>{produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+            <div className='ItemCarrinhoText'>{produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+          </div>
+          <div className="ItemBodyRowDescription ItemBodyCarrinhoDescription">
+            <div className='ItemCarrinhoText'>QTD: {produto.noCarrinho}</div>
           </div>
           <div className='ItemBodyRowActions ItemBodyCarrinhoActions'>
-            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>+</button>
-            <div className='ItemCarrinho-Quantidade'>{produto.noCarrinho}</div>
-            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.getCarrinho(produto.id))}>-</button>
+            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>add</button>
+            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.getCarrinho(produto.id))}>rm</button>
+            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.clearCarrinhoById(produto.id))}>exc</button>
           </div>
         </div>
     </div>

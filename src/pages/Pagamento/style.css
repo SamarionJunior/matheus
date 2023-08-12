@@ -1,15 +1,31 @@
 .contlPagamento{
   padding-top: 20rem;
   padding-bottom: 10rem;
-  height: calc(100vh - 10rem - 5rem - 5rem - 5rem - 5rem);
+  height: calc(100vh - 20rem - 10rem);
+}
+
+@media (max-width: 1024px){
+  .contlPagamento{
+    padding-top: 20rem;
+    padding-bottom: 5rem;
+    height: calc(100vh - 20rem - 5rem);
+  }
+  .ActionsPagamento{
+    bottom: 0;
+  }
 }
 
 .ItemBodyPagamento{
-  width: calc(1024px - 120px);
+  width: calc(100% - 120px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
   .ItemBodyPagamentoTitle{
-    width: calc(100% - 30rem - 60px);
+    width: 100%;
   }
 
     .ItemTitlePagamento{
@@ -17,12 +33,12 @@
     }
 
   .ItemBodyPagamentoDescription{
-    width: 10rem;
+    width: 100%;
   }
 
-  .ItemBodyPagamentoActions{
+  /* .ItemBodyPagamentoActions{
     width: 15rem;
-  }
+  } */
 
 .SelectPay{
   width: calc(100% - (100% - 1024px));

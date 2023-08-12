@@ -12,7 +12,6 @@ const Item = ({produto}) => {
   return (
     <div key={produto.id} className='Item ItemCollumn'>
       <ImageSmall/>
-
       <div className="ItemBodyRow ItemBodyPainel">
         <div className="ItemBodyRowTitle ItemBodyPainelTitle">
           <div className='ItemTitle ItemTitlePainel'>{produto.nome}</div>
@@ -23,11 +22,11 @@ const Item = ({produto}) => {
         <div className="ItemBodyRowDescription ItemBodyPainelDescription">
           <div className='ItemBodyText'>{produto.status}</div>
         </div>
-          <div className='ItemBodyRowActions ItemBodyPainelActions'>
-            <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Em Produção"))}>Em Produção</button>
-            <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Em Transito"))}>Em Transito</button>
-            <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Entregue"))}>Entregue</button>
-          </div>
+        <div className='ItemBodyRowActions ItemBodyPainelActions'>
+          <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Em Produção"))}>Pro</button>
+          <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Em Transito"))}>Tra</button>
+          <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Entregue"))}>Ent</button>
+        </div>
       </div>
       
     </div>

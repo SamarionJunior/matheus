@@ -11,13 +11,13 @@ const Item = ({produto}) => {
             <div className='ItemTitle ItemTitlePagamento'>{produto.nome}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyPagamentoDescription">
-            <div className='ItemBodyText'>{produto.emProcessoDePagamento}</div>
+            <div className='ItemBodyText'>QTD: {produto.emProcessoDePagamento}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyPagamentoDescription">
-            <div className='ItemBodyText'>{produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+            <div className='ItemBodyText'>PREÇO: {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyPagamentoDescription">
-            <div className='ItemBodyText'>{(produto.emProcessoDePagamento * produto.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+            <div className='ItemBodyText'>TOTAL: {(produto.emProcessoDePagamento * produto.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
           </div>
         </div>
     </div>

@@ -14,14 +14,14 @@ const Actions = () => {
 
   return (
 
-      <div className="Actions">
+      <div className="Actions ActionsCarrinho">
 
         <div className="Buttons">
 
           {
             isNoCarrinho.length !== 0 ? (<>
-              <button onClick={e => dispatch(ListActions.clearCarrinho(produtos))}>Limpar Carrinho</button>
-              <button onClick={e => dispatch(ListActions.setPagamento(produtos))}>adicionar</button>
+              <button onClick={e => dispatch(ListActions.clearCarrinho(produtos))}>limpar</button>
+              <button onClick={e => dispatch(ListActions.setPagamento(produtos))}>comprar</button>
             </>) : null
           }
           
