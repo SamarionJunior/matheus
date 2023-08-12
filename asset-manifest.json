@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/matheus/static/css/main.779c9a77.css",
-    "main.js": "/matheus/static/js/main.3fd6684b.js",
+    "main.css": "/matheus/static/css/main.fac6ad7a.css",
+    "main.js": "/matheus/static/js/main.36b44371.js",
     "index.html": "/matheus/index.html",
-    "main.779c9a77.css.map": "/matheus/static/css/main.779c9a77.css.map",
-    "main.3fd6684b.js.map": "/matheus/static/js/main.3fd6684b.js.map"
+    "main.fac6ad7a.css.map": "/matheus/static/css/main.fac6ad7a.css.map",
+    "main.36b44371.js.map": "/matheus/static/js/main.36b44371.js.map"
   },
   "entrypoints": [
-    "static/css/main.779c9a77.css",
-    "static/js/main.3fd6684b.js"
+    "static/css/main.fac6ad7a.css",
+    "static/js/main.36b44371.js"
   ]
 }
