@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { selectors } from '../../../store/selectors/produtos';
 
 import Item from './Item';
+import SelectPay from './SelectPay';
 
 import Warning from '../../../components/Warning';
 
@@ -18,12 +19,13 @@ const List = () => {
     <div className="contl contlPagamento">
 
         <div className="Lista ListaColumn">
-
-            {isEmProcessamento.length !== 0 ? 
-              isEmProcessamento.map(produto => (
-                  <Item produto={produto}/>
-                )) : <Warning text={"Nenhum produto para pagamento"} newValue="20rem"/>
-            }
+          
+          <SelectPay/>
+          {isEmProcessamento.length !== 0 ? 
+            isEmProcessamento.map(produto => (
+                <Item produto={produto}/>
+              )) : <Warning text={"Nenhum produto para pagamento"} newValue="20rem"/>
+          }
         
         </div>
     

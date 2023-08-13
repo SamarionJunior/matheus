@@ -20,8 +20,8 @@ const Actions = () => {
 
           {
             isEmProcessamento.length !== 0 ? (<>
-              <button onClick={e => dispatch(ListActions.setPedidos(produtos))}>adicionar</button>
               <button onClick={e => dispatch(ListActions.getPagamento(produtos))}>cancelar</button>
+              <button onClick={e => dispatch(ListActions.setPedidos(produtos))}>Pagar</button>
             </>) : null
           }
 

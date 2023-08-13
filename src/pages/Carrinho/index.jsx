@@ -8,6 +8,7 @@ import Footer from '../../components/Footer';
 
 import List from './components/List';
 import Actions from './components/Actions';
+import Total from './components/Total';
 
 const Carrinho = () => {
 
@@ -19,6 +20,8 @@ const Carrinho = () => {
       <Title title={"Carrinho"}/>
 
       <List/>
+
+      <Total/>
 
       <Actions/>
 

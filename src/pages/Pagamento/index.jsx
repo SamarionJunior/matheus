@@ -6,9 +6,9 @@ import Links from '../../components/Links';
 import Title from '../../components/Title';
 import Footer from '../../components/Footer';
 
-import SelectPay from './components/SelectPay';
 import Actions from './components/Actions';
 import List from './components/List';
+import Total from '../Carrinho/components/Total';
 
 const Pagamento = () => {
 
@@ -19,9 +19,9 @@ const Pagamento = () => {
       
       <Title title={"Pagamento"}/>
 
-      <SelectPay/>
-
       <List/>
+
+      <Total/>
 
       <Actions/>
 

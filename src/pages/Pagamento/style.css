@@ -1,14 +1,14 @@
 .contlPagamento{
-  padding-top: 20rem;
-  padding-bottom: 10rem;
-  height: calc(100vh - 20rem - 10rem);
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+  height: calc(100vh - 10rem - 15rem);
 }
 
 @media (max-width: 1024px){
   .contlPagamento{
-    padding-top: 20rem;
-    padding-bottom: 5rem;
-    height: calc(100vh - 20rem - 5rem);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    height: calc(100vh - 10rem - 10rem);
   }
   .ActionsPagamento{
     bottom: 0;
@@ -40,15 +40,17 @@
     width: 15rem;
   } */
 
+
+
 .SelectPay{
-  width: calc(100% - (100% - 1024px));
-  height: 10rem;
-  padding-right: calc((100% - 1024px) / 2);
-  padding-left: calc((100% - 1024px) / 2);
-  position: fixed;
-  top: 10rem;
-  left: 0;
-  z-index: 9999;
+  width: 100%;
+  height: auto;
+  /* padding-right: calc((100% - 1024px) / 2);
+  padding-left: calc((100% - 1024px) / 2); */
+  /* position: fixed; */
+  /* top: 10rem; */
+  /* left: 0; */
+  /* z-index: 9999; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -56,41 +58,65 @@
   align-items: center;
 }
 
-.SelectPayContent{
-  width: 1024px;
-  min-width: 1024px;
-  max-width: 1024px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
+/* @media (max-width: 1024px){
+  .SelectPay{
+    width: calc(100%);
+    padding-left: 0;
+    padding-right: 0;
+  }
+} */
 
-.SelectPayContent > *:last-child{
-  margin-right: 0;
-}
+  .SelectPayContent{
+    width: 100%;
+    /* min-width: 320px;
+    max-width: 1024px; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-.SelectPayContent > *:hover{
-  background-color: white;
-  color: black;
-}
+  /* @media (max-width: 1024px){
+    .SelectPayContent{
+      height: 100%;
+      width: calc(100% - 2rem);
+      max-width: calc(1024px - 2rem);
+      min-width: calc(320px - 2rem);
+    }
+  } */
 
-.SelectPayContent > *:active{
-  background-color: black;
-  color: white;
-}
+    .Radio{
+      width: 100%;
+    }
 
-.SelectPayButton{
-  font-weight: bolder;
-  text-transform: uppercase;
-  flex-grow: 1;
-  margin-right: 2rem;
-  height: calc(100% - 2rem);
-  margin-bottom: 2rem;
+    .Radio > *{
+      margin-bottom: 1rem;
+    }
 
-  background-color: black;
-  color: white;
-  border: 3px solid black;
-}
+      .RadioColection{
+        width: 100%;
+      }
+
+      .RadioColection > *{
+        margin-right: 1rem;
+      }
+
+    .WarningPagamento{
+      width: 100%;
+    }
+
+    .SelecForm{
+      width: 100%;
+    }
+
+    .SelecForm > *{
+      margin-bottom: 1.3rem;
+    }
+
+      .SelecFormInput{
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 3px solid black;
+      }

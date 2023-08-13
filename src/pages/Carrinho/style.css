@@ -1,12 +1,12 @@
 .contlCarrinho{
-  padding-bottom: 10rem;
-  height: calc(100vh - 10rem - 5rem - 5rem);
+  padding-bottom: 15rem;
+  height: calc(100vh - 10rem - 15rem);
 }
 
 @media (max-width: 1024px){
   .contlCarrinho{
-    padding-bottom: 5rem;
-    height: calc(100vh - 10rem - 5rem);
+    padding-bottom: 10rem;
+    height: calc(100vh - 10rem - 10rem);
   }
   .ActionsCarrinho{
     bottom: 0;
@@ -97,3 +97,63 @@
       .ItemCarrinho-Actions:active{
         text-decoration: underline;
       }
+
+.Total{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10rem;
+  left: 0;
+  z-index: 999;
+  width: calc(100% - (100% - 1024px));
+  height: 5rem;
+  padding-left: calc((100% - 1024px) / 2);
+  padding-right: calc((100% - 1024px) / 2);
+}
+
+@media (max-width: 1024px){
+  .Total{
+    width: calc(100%);
+    padding-left: 0;
+    padding-right: 0;
+    bottom: 5rem;
+  }
+}
+
+  .TotalContent{
+    height: 100%;
+    width: 100%;
+    max-width: 1024px;
+    min-width: 1024px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  @media (max-width: 1024px){
+    .TotalContent{
+      height: 100%;
+      width: calc(100% - 2rem);
+      max-width: calc(1024px - 2rem);
+      min-width: calc(320px - 2rem);
+    }
+  }
+
+  .TotalContent > *{
+    margin-right: 1rem;
+  }
+
+  .TotalContent > *:last-child{
+    margin-right: 0;
+  }
+
+    .TotalText{
+      font-size: 2rem;
+    }
+
+    .TotalText > strong{
+      font-size: 2rem;
+    }

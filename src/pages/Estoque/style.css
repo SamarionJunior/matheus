@@ -142,7 +142,20 @@
 
 
 
+/* .contlEstoque{
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  height: calc(100vh - 20rem - 5rem);
+}
 
+@media (max-width: 1024px){
+  .contlEstoque{
+    padding-top: 20rem;
+    padding-bottom: 0rem;
+    height: calc(100vh - 20rem);
+  }
+} */
+    
 
 .Form{
   width: calc(100% - (100% - 1024px));
@@ -160,57 +173,87 @@
   align-items: center;
 }
 
-.Formulario{
-  width: 1024px;
-  min-width: 1024px;
-  max-width: 1024px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+@media (max-width: 1024px){
+  .Form{
+    width: calc(100%);
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.Formulario > *{
-  margin-right: 2rem;
-}
+  .Formulario{
+    width: 1024px;
+    min-width: 1024px;
+    max-width: 1024px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.Formulario > *:last-child{
-  margin-right: 0;
-}
+  @media (max-width: 1024px){
+    .Formulario{
+      height: 100%;
+      width: calc(100% - 2rem);
+      max-width: calc(1024px - 2rem);
+      min-width: calc(320px - 2rem);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  }
 
-.FormularioImput{    
-  width: calc(10rem - 6px);
-  padding: 0 1rem;
-  border: 3px solid black;
-  /* border: 3px solid grey; */
-  height: calc(5rem - 6px);
-}
+    .FormularioImput{
+      width: 10%;
+      border-bottom: 3px solid black;
+    }
 
-/* .FormularioImput:focus{
-  border: 3px solid black;
-} */
+    @media (max-width: 1024px){
+      .FormularioImput{
+        width: calc(50% - 1rem);
+        border-bottom: 3px solid black;
+      }
+    }
+  
+    .FormularioImput:first-child{
+      margin-right: 0;
+    }
 
-.FormularioImputTitle{
-  width: calc(100% - 35rem - 60px);
-}
+    .FormularioImputTitle{
+      width: 55%;
+    }
 
-.FormularioImputButton{
-  width: 15rem;
-  height: 5rem;
-  background-color: black;
-  color: white;
-  /* border: 3px solid black; */
-  font-weight: bolder;
-}
+    @media (max-width: 1024px){
+      .FormularioImputTitle{
+        width: 100%;
+      }
+    }
 
-.FormularioImputButton:hover{
-  background-color: white;
-  color: black;
-}
+    .FormularioImputButton{
+      width: 10%;
+      background-color: transparent;
+      border-bottom: none;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
 
-.FormularioImputButton:active{
-  background-color: white;
-  color: black;
-}
+    @media (max-width: 1024px){
+      .FormularioImputButton{
+        width: 100%;
+        background-color: transparent;
+        border-bottom: none;
+        font-weight: bolder;
+        text-transform: uppercase;
+      }
+    }
+
+    .FormularioImputButton:hover{
+    }
+
+    .FormularioImputButton:active{
+      text-decoration: underline;
+    }
