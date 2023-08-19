@@ -13,14 +13,14 @@ import Painel from './pages/Painel';
 
 function App() {
   return (
-    <Routes>
-      <Route exact path="/Produtos" element={<Produtos />} />
-      <Route exact path="/Carrinho" element={<Carrinho />} />
-      <Route exact path="/Pagamento" element={<Pagamento />} />
-      <Route exact path="/Pedidos" element={<Pedidos />} />
-      <Route exact path="/Estoque" element={<Estoque />} />
-      <Route exact path="/Painel" element={<Painel />} />
-      <Route exact path="/" element={<Produtos />} />
+    <Routes basename="/matheus">
+      <Route exact path="/matheus/Produtos" element={<Produtos />} />
+      <Route exact path="/matheus/Carrinho" element={<Carrinho />} />
+      <Route exact path="/matheus/Pagamento" element={<Pagamento />} />
+      <Route exact path="/matheus/Pedidos" element={<Pedidos />} />
+      <Route exact path="/matheus/Estoque" element={<Estoque />} />
+      <Route exact path="/matheus/Painel" element={<Painel />} />
+      <Route exact path="/matheus/" element={<Produtos />} />
       <Route exact path="*" element={<Produtos />} />
     </Routes>
   );
