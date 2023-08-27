@@ -9,37 +9,51 @@ import Warning from '../../../components/Warning';
 
 import Item from './Item';
 
+import { useQuery } from 'react-query';
+import axios from 'axios';
+
 const List = () => {
 
   const [produtos, setProdutos] = useState([])
 
-  useEffect(() => {
+  const {data, isFetching} = useQuery('repos', async () => {
+    const response = await axios.get("http://localhost:3030/produto/")
+    response.data.produtos.map(p => setProdutos(pro => [... pro, p]));
+  })
 
-    async function fetchData() {
+  // useEffect(() => {
+  //   data.map(p => setProdutos(pro => [... pro, p]))
+  // }, [data])
 
-      const response = await fetch('http://localhost:3030/produto/', {
-        method: 'GET',
-        headers: {
-            "Content-Type": 'application/json',
-            "User-Agent": "Insomnia/2023.5.4",
-            "Access-Control-Allow-Origin": 'http://localhost:3030',
-            "Access-Control-Allow-Credentials": true
-        }
-      });
+  // useEffect(() => {
 
-      const json = await response.json();
+  //   async function fetchData() {
 
-      const auxprodutos = json.produtos;
+  //     const response = await fetch('http://localhost:3030/produto/', {
+  //       method: 'GET',
+  //       headers: {
+  //           "Content-Type": 'application/json',
+  //           "User-Agent": "Insomnia/2023.5.4",
+  //           "Access-Control-Allow-Origin": 'http://localhost:3030',
+  //           "Access-Control-Allow-Credentials": true
+  //       }
+  //     });
 
-      auxprodutos.map(p => setProdutos(pro => [... pro, p]))
+  //     const json = await response.json();
 
-    }
+  //     const auxprodutos = json.produtos;
 
-    fetchData();
+  //     auxprodutos.map(p => setProdutos(pro => [... pro, p]))
 
-  }, [])
+  //   }
+
+  //   fetchData();
+
+  // }, [])
 
   // const produtos = useSelector(selectors.getProdutos)
+
+  console.log(data)
 
   return (
       <div className="contl contlProdutos">
