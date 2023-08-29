@@ -1,3 +1,10 @@
+export function setState(produtos){
+    return {
+        type: "SET_STATE",
+        produtos
+    }
+}
+
 export function setProdutos(nome, quantidade, preco){
     return {
         type: "SET_PRODUTOS",

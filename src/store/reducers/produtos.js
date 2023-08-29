@@ -1,6 +1,16 @@
 import INITIAL_STATE from "../states/produtos"
 
 export default function produtos(state = INITIAL_STATE, action){
+    if(action.type === 'SET_STATE'){
+        const produtos = action.produtos;
+
+        const newStates = Object.assign([], produtos);
+
+        return {
+            ...state,
+            produtos: [...newStates]
+        }
+    }
     if(action.type === 'SET_PRODUTOS'){
         const preco = action.preco
         const quantidade = action.quantidade

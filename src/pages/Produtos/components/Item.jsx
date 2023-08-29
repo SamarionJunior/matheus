@@ -7,12 +7,12 @@ import * as ListActions from "../../../store/actions/produtos"
 
 import {ImageSmall} from '../../../components/Image';
 
-const Item = ({produto, id}) => {
+const Item = ({produto}) => {
 
   const dispatch = useDispatch()
 
   return (
-    <div key={id} className="Item ItemCollumn">
+    <div className="Item ItemCollumn">
       <ImageSmall/>
       <div className="ItemBodyRow ItemBodyRowProdutos">
         <div className="ItemBodyText">
