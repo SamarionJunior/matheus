@@ -1,5 +1,7 @@
 import INITIAL_STATE from "../states/produtos"
 
+import axios from 'axios';
+
 export default function produtos(state = INITIAL_STATE, action){
     if(action.type === 'SET_STATE'){
         const produtos = action.produtos;
@@ -105,6 +107,27 @@ export default function produtos(state = INITIAL_STATE, action){
         })
 
         const newCarrinho = Object.assign([], auxCarrinho);
+
+        async function fetchData() {
+
+            const response = await fetch('http://localhost:3030/produto/all/', {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": 'application/json',
+                    "User-Agent": "Insomnia/2023.5.4",
+                    "Access-Control-Allow-Origin": 'http://localhost:3030',
+                    "Access-Control-Allow-Credentials": true
+                },
+                newCarrinho
+            });
+        
+            const json = await response.json();
+        
+            return json.produtos;
+
+        }
+
+        console.log(fetchData())
 
         return {
             ...state,
