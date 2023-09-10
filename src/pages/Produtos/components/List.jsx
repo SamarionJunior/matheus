@@ -1,70 +1,37 @@
 // import '../style.css'
 
-import React , {useEffect, useState} from 'react';
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-
-import * as ListActions from "../../../store/actions/produtos"
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
 
 import Warning from '../../../components/Warning';
 
 import Item from './Item';
-
-import { useQuery } from 'react-query';
-import axios from 'axios';
+import { getAllCars } from '../../../store/fetchActions';
 
 const List = () => {
+  const produtos = useSelector(selectors.getProdutos)
 
   const dispatch = useDispatch()
 
-  const [newProdutos, setNewProdutos] = useState([])
-
-  const produtos = useSelector(selectors.getProdutos)
-
-  const {data, isFetching} = useQuery('repos', async () => {
-    const response = await axios.get("http://localhost:3030/produto/")
-    return response.data.produtos;
-    // return response.data.produtos.map(p => setNewProdutos(pro => [... pro, p]));
-
-    // const newStates = Object.assign([], produtos);
-  })
-
   useEffect(() => {
-    if(data){
-      data.map(p => setNewProdutos(pro => [... pro, p]));
-    }
-  }, [data])
-
-  useEffect(() => {
-    if(newProdutos){
-      dispatch(ListActions.setState(newProdutos))
-    }
-  }, [newProdutos])
-
-  // console.log(produtos)
+    getAllCars(dispatch)
+  }, [])
 
   return (
       <div className="contl contlProdutos">
 
         <div className="Lista ListaColumn">
 
-          
           {
-            // isFetching ?
 
-              produtos !== undefined && produtos !== [] && produtos.length !== 0 ? 
-                produtos.map(produto => {
-                  produto.id = produto._id; 
-                  console.log(produto.id);
-                  return (
+              produtos !== undefined && produtos.length !== 0 ? 
+                produtos.map(produto => (
                     <Item produto={produto} key={produto.id}/>
-                )}) :(
+                )) : (
                 <Warning text={"Nenhum produto no estoque"}/>
               )
-            
-            // : null
           
           }
           
@@ -101,3 +68,34 @@ export default List
 //   fetchData();
 
 // }, [])
+
+
+
+
+  // const dispatch = useDispatch()
+
+  // const [newProdutos, setNewProdutos] = useState([])
+
+  // const produtos = useSelector(selectors.getProdutos)
+
+  // const {data, isFetching} = useQuery('repos', async () => {
+  //   const response = await axios.get("http://localhost:3030/produto/")
+  //   return response.data.produtos;
+  //   // return response.data.produtos.map(p => setNewProdutos(pro => [... pro, p]));
+
+  //   // const newStates = Object.assign([], produtos);
+  // })
+
+  // useEffect(() => {
+  //   if(data){
+  //     data.map(p => setNewProdutos(pro => [... pro, p]));
+  //   }
+  // }, [data])
+
+  // useEffect(() => {
+  //   if(newProdutos){
+  //     dispatch(ListActions.setState(newProdutos))
+  //   }
+  // }, [newProdutos])
+
+  // console.log(produtos)

@@ -1,96 +1,25 @@
-export function setState(produtos){
-    return {
-        type: "SET_STATE",
-        produtos
-    }
-}
+import { createAction } from "@reduxjs/toolkit"
 
-export function setProdutos(nome, quantidade, preco){
-    return {
-        type: "SET_PRODUTOS",
-        nome,
-        quantidade,
-        preco
-    }
-}
+export const setState = createAction("SET_STATE"); 
 
-export function setProdutosById(id, nome, quantidade, preco){
-    return {
-        type: "SET_PRODUTOS_ID",
-        id,
-        nome,
-        quantidade,
-        preco
-    }
-}
+export const setProdutos = createAction("SET_PRODUTOS");
 
-export function deleteProdutoById(id){
-    return {
-        type: "DELETE_PRODUTOS_ID",
-        id
-    }
-}
+export const setProdutosById = createAction("SET_PRODUTOS_ID");
 
-export function setStatus(id, status){
-    return {
-        type: "SET_STATUS",
-        id,
-        status
-    }
-}
+export const deleteProdutoById = createAction("DELETE_PRODUTOS_ID");
 
-export function setCarrinho(id){
-    return {
-        type: "SET_CARRINHO",
-        id
-    }
-}
+export const setStatus = createAction("SET_STATUS");
 
-export function getCarrinho(id){
-    return {
-        type: "GET_CARRINHO",
-        id
-    }
-}
+export const setCarrinho = createAction("SET_CARRINHO");
 
-export function clearCarrinhoById(id){
-    return {
-        type: "CLEAR_CARRINHO_BY_ID",
-        id
-    }
-}
+export const getCarrinho = createAction("GET_CARRINHO");
 
-export function clearCarrinho(id){
-    return {
-        type: "CLEAR_CARRINHO",
-        id
-    }
-}
+export const clearCarrinhoById = createAction("CLEAR_CARRINHO_BY_ID");
 
-export function setPagamento(produtos){
-    return {
-        type: "SET_PAGAMENTO",
-        produtos
-    }
-}
+export const clearCarrinho = createAction("CLEAR_CARRINHO");
 
-export function getPagamento(produtos){
-    return {
-        type: "GET_PAGAMENTO",
-        produtos
-    }
-}
+export const setPagamento = createAction("SET_PAGAMENTO");
 
-export function setPedidos(produtos){
-    return {
-        type: "SET_PEDIDOS",
-        produtos
-    }
-}
+export const getPagamento = createAction("GET_PAGAMENTO");
 
-// export function getPedidos(produtos){
-//     return {
-//         type: "GET_PEDIDOS",
-//         produtos
-//     }
-// }
+export const setPedidos = createAction("SET_PEDIDOS");
