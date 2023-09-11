@@ -8,8 +8,6 @@ import List from './components/List';
 
 const Produtos = () => {
 
-  console.clear()
-
   return (
     <div className='Content'>
       

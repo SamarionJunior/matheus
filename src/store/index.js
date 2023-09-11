@@ -8,7 +8,7 @@ import produtos from "./reducers/produtos";
 
 const store = configureStore({
     reducer: {
-        produtos,
+        produtos: produtos.reducer,
     }
 });
 

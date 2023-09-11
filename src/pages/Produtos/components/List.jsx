@@ -8,7 +8,7 @@ import { selectors } from '../../../store/selectors/produtos';
 import Warning from '../../../components/Warning';
 
 import Item from './Item';
-import { getAllCars } from '../../../store/fetchActions';
+import { fetchUserById } from '../../../store/reducers/produtos';
 
 const List = () => {
   const produtos = useSelector(selectors.getProdutos)
@@ -16,7 +16,7 @@ const List = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    getAllCars(dispatch)
+    dispatch(fetchUserById())
   }, [])
 
   return (

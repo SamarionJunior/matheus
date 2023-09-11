@@ -4,11 +4,12 @@ import { setState } from '../actions/produtos';
 export const getAllCars = () => {
     return (dispatch) => {
         api
-            .get('/produtos')
+            .get('/produto/')
                 .then(res => {
-                    console.log(res)
-                    dispatch(setState(res.data))
+                    // console.log(res.data.produtos)
+                    dispatch(setState(res.data.produtos))
                 })
                 .catch(console.log)
+                // .finally(console.log("oi"))
     }
 }
