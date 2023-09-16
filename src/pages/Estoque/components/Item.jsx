@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 
 import { useDispatch } from "react-redux";
 
-import * as ListActions from "../../../store/actions/produtos"
-
 import {ImageSmall} from '../../../components/Image';
+import { deleteProductById, updateProductById } from '../../../store/fetchActions';
 
 const Item = ({item}) => {
 
@@ -47,8 +46,8 @@ const Item = ({item}) => {
                             : 
                         <>
                             <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(false); clear(); adicinarEfeitoDeEdicao(false, id)}}>Can</button>
-                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(ListActions.setProdutosById(id, nome, quantidade, preco))}}>Sal</button>
-                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(ListActions.deleteProdutoById(id));}}>Apa</button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(updateProductById(id, nome, quantidade, preco))}}>Sal</button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(deleteProductById(id));}}>Apa</button>
                         </>
                     }
                 </div>

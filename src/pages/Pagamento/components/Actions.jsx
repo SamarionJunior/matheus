@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
-import * as ListActions from "../../../store/actions/produtos"
 import { selectors } from '../../../store/selectors/produtos';
+import { addProductsToOrders, removeProductsFromPaymentArea } from '../../../store/fetchActions';
 
 const Actions = () => {
 
@@ -20,8 +20,8 @@ const Actions = () => {
 
           {
             isEmProcessamento.length !== 0 ? (<>
-              <button onClick={e => dispatch(ListActions.getPagamento(produtos))}>cancelar</button>
-              <button onClick={e => dispatch(ListActions.setPedidos(produtos))}>Pagar</button>
+              <button onClick={e => dispatch(removeProductsFromPaymentArea(produtos))}>cancelar</button>
+              <button onClick={e => dispatch(addProductsToOrders(produtos))}>Pagar</button>
             </>) : null
           }
 

@@ -3,12 +3,10 @@ import '../style.css'
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 
-// import * as ListActions from "../../../store/actions/produtos"
-import * as ListActions from "../../../store/reducers/produtos"
-
 import { selectors } from '../../../store/selectors/produtos';
 
 import {ImageSmall} from '../../../components/Image';
+import { addProductToShoppingCarById } from '../../../store/fetchActions';
 
 const Item = ({produto}) => {
 
@@ -38,16 +36,10 @@ const Item = ({produto}) => {
             <button className="ButtonCarrinho" onClick={() => click()}>Mais</button>
             {produto.quantidade <= 0 ?
               <div className="ItemBodyWarning">(Produto esgotado)</div> : 
-              <button className="ButtonCarrinho" onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>Add</button>
+              <button className="ButtonCarrinho" onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>Add</button>
             }
           </div>
         </div>
-        {/* <div className="ItemBodyFooter">
-          {produto.quantidade <= 0 ?
-            <div className="ItemBodyWarning">(Produto esgotado)</div> : 
-            <button className="ItemBodyAction" onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>adicionar</button>
-          }
-        </div> */}
       </div>
     </div>
 
@@ -55,24 +47,3 @@ const Item = ({produto}) => {
 }
 
 export default Item
-
-// <div key="id" className="Item ItemCell">
-//     <ImageMedium/>
-//     <div className="ItemBody">
-//         <div className="ItemTitle ItemTitleProdutos">
-//           {produto.nome}
-//         </div>
-//         <div className="ItemBodyDescription">
-//           {produto.descricao}
-//         </div>
-//         <div className="ItemBodyFooter">
-//           <div className="ItemBodyPrice">
-//             {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
-//           </div>
-//           {produto.quantidade <= 0 ?
-//             <div className="ItemBodyWarning">(Produto esgotado)</div> : 
-//             <button className="ItemBodyAction" onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>adicionar</button>
-//           }
-//         </div>
-//     </div>
-// </div>

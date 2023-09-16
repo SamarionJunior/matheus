@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
-import * as ListActions from "../../../store/actions/produtos"
 import { selectors } from '../../../store/selectors/produtos';
+import { addProducsToPaymentArea, deleteAllProductsFromShoppingCar } from '../../../store/fetchActions';
 
 const Actions = () => {
 
@@ -20,8 +20,8 @@ const Actions = () => {
 
           {
             isNoCarrinho.length !== 0 ? (<>
-              <button onClick={e => dispatch(ListActions.clearCarrinho(produtos))}>limpar</button>
-              <button onClick={e => dispatch(ListActions.setPagamento(produtos))}>comprar</button>
+              <button onClick={e => dispatch(deleteAllProductsFromShoppingCar(produtos))}>limpar</button>
+              <button onClick={e => dispatch(addProducsToPaymentArea(produtos))}>comprar</button>
             </>) : null
           }
           

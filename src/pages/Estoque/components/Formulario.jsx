@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useDispatch } from "react-redux";
 
-import * as ListActions from "../../../store/actions/produtos"
+import { createProductInProductsList } from '../../../store/fetchActions';
 
 const Formulario = () => {
 
@@ -14,7 +14,7 @@ const Formulario = () => {
 
   const onSubmit = e => {
     e.preventDefault()
-    dispatch(ListActions.setProdutos(nome, quantidade, preco))
+    dispatch(createProductInProductsList(nome, quantidade, preco))
   }
 
   return (

@@ -1,9 +1,8 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
 
-import * as ListActions from "../../../store/actions/produtos"
-
 import {ImageSmall} from '../../../components/Image';
+import { addProductToShoppingCarById, deleteProductFromShoppingCarById, removeProductFromShoppingCarById } from '../../../store/fetchActions';
 
 const Item = ({produto}) => {
 
@@ -23,9 +22,9 @@ const Item = ({produto}) => {
             <div className='ItemCarrinhoText'>QTD: {produto.noCarrinho}</div>
           </div>
           <div className='ItemBodyRowActions ItemBodyCarrinhoActions'>
-            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.setCarrinho(produto.id))}>add</button>
-            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.getCarrinho(produto.id))}>rm</button>
-            <button className='ItemCarrinho-Actions' onClick={e => dispatch(ListActions.clearCarrinhoById(produto.id))}>exc</button>
+            <button className='ItemCarrinho-Actions' onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>add</button>
+            <button className='ItemCarrinho-Actions' onClick={e => dispatch(removeProductFromShoppingCarById(produto.id))}>rm</button>
+            <button className='ItemCarrinho-Actions' onClick={e => dispatch(deleteProductFromShoppingCarById(produto.id))}>exc</button>
           </div>
         </div>
     </div>

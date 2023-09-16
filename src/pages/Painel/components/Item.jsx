@@ -1,9 +1,8 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
 
-import * as ListActions from "../../../store/actions/produtos"
-
 import {ImageSmall} from '../../../components/Image';
+import { updateOrderStatusById } from '../../../store/fetchActions';
 
 const Item = ({produto}) => {
 
@@ -23,9 +22,9 @@ const Item = ({produto}) => {
           <div className='ItemBodyText'>{produto.status}</div>
         </div>
         <div className='ItemBodyRowActions ItemBodyPainelActions'>
-          <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Em Produção"))}>Pro</button>
-          <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Em Transito"))}>Tra</button>
-          <button className='ItemPainel-Actions' onClick={_ => dispatch(ListActions.setStatus(produto.id, "Entregue"))}>Ent</button>
+          <button className='ItemPainel-Actions' onClick={_ => dispatch(updateOrderStatusById(produto.id, "Em Produção"))}>Pro</button>
+          <button className='ItemPainel-Actions' onClick={_ => dispatch(updateOrderStatusById(produto.id, "Em Transito"))}>Tra</button>
+          <button className='ItemPainel-Actions' onClick={_ => dispatch(updateOrderStatusById(produto.id, "Entregue"))}>Ent</button>
         </div>
       </div>
       
