@@ -1,3 +1,7 @@
+.strong{
+  font-weight: normal !important;
+}
+
 .contlPainel{
   padding-top: 10rem;
   padding-bottom: 5rem;

@@ -46,7 +46,7 @@ const Item = ({item}) => {
                             : 
                         <>
                             <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(false); clear(); adicinarEfeitoDeEdicao(false, id)}}>Can</button>
-                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(updateProductById(id, nome, quantidade, preco))}}>Sal</button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(updateProductById({id: id, nome: nome, quantidade: quantidade, preco: preco}))}}>Sal</button>
                             <button className='ItemEstoque-Button' onClick={(e) => {dispatch(deleteProductById(id));}}>Apa</button>
                         </>
                     }

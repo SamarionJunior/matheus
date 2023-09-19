@@ -1,6 +1,6 @@
 import './App.css';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Routes, Route } from "react-router-dom";
 
@@ -10,8 +10,17 @@ import Pagamento from './pages/Pagamento';
 import Pedidos from './pages/Pedidos';
 import Estoque from './pages/Estoque';
 import Painel from './pages/Painel';
+import { useDispatch } from 'react-redux';
+import { getProductsList } from './store/fetchActions';
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getProductsList())
+  }, [])
+
   return (
     <Routes basename="/matheus">
       <Route exact path="/matheus/Produtos" element={<Produtos />} />

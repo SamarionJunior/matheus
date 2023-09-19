@@ -13,7 +13,7 @@ const Total = () => {
 
   const total = isNoCarrinho.reduce((acumulador, elemento) => acumulador + (elemento.preco * elemento.noCarrinho), 0);
 
-  console.log(quantidade, total)
+  // console.log(quantidade, total)
 
   return (
     <div className="Total">

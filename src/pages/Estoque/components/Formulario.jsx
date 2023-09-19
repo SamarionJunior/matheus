@@ -14,7 +14,7 @@ const Formulario = () => {
 
   const onSubmit = e => {
     e.preventDefault()
-    dispatch(createProductInProductsList(nome, quantidade, preco))
+    dispatch(createProductInProductsList({nome: nome, quantidade: quantidade, preco: preco}))
   }
 
   return (

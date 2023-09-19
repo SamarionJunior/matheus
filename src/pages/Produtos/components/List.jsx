@@ -1,23 +1,16 @@
 // import '../style.css'
 
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
 
 import Warning from '../../../components/Warning';
 
 import Item from './Item';
-import { getProductsList } from '../../../store/fetchActions';
 
 const List = () => {
   const produtos = useSelector(selectors.getProdutos)
-
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getProductsList())
-  }, [])
 
   return (
       <div className="contl contlProdutos">

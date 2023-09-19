@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
@@ -10,6 +10,10 @@ import Item from './Item';
 const List = () => {
 
   const produtos = useSelector(selectors.getProdutos)
+  
+  // useEffect(() => {
+  //   console.log(produtos)
+  // }, [produtos])
 
   const newProdutos = produtos.filter(produto => produto.NosPedidos > 0)
 
@@ -20,8 +24,8 @@ const List = () => {
         <div className="Lista ListaColumn">
 
             {newProdutos.length !== 0 ? 
-                produtos.map(produto => 
-                  <Item produto={produto}/>
+                newProdutos.map(produto => 
+                  <Item produto={produto} key={produto.id}/>
                 ) : (
                 <Warning text={"Nenhum produto no estoque"}/>
             )

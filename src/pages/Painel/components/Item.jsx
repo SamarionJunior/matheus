@@ -1,12 +1,23 @@
-import React from 'react';
-import { useDispatch } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 
 import {ImageSmall} from '../../../components/Image';
 import { updateOrderStatusById } from '../../../store/fetchActions';
+import { selectors } from '../../../store/selectors/produtos';
 
 const Item = ({produto}) => {
 
   const dispatch = useDispatch()
+
+  const auxProduto = useSelector(selectors.getProdutos)
+  // = useSelector(selectors.getProdutos).filter(p => p.id === produto.id)[0]
+  
+// console.log(auxProduto)
+
+  // useEffect(() => {
+  //   console.log(produto)
+  // //   // console.log(produto.status)
+  // }, [produto.status])
 
   return (
     <div key={produto.id} className='Item ItemCollumn'>
@@ -22,9 +33,9 @@ const Item = ({produto}) => {
           <div className='ItemBodyText'>{produto.status}</div>
         </div>
         <div className='ItemBodyRowActions ItemBodyPainelActions'>
-          <button className='ItemPainel-Actions' onClick={_ => dispatch(updateOrderStatusById(produto.id, "Em Produção"))}>Pro</button>
-          <button className='ItemPainel-Actions' onClick={_ => dispatch(updateOrderStatusById(produto.id, "Em Transito"))}>Tra</button>
-          <button className='ItemPainel-Actions' onClick={_ => dispatch(updateOrderStatusById(produto.id, "Entregue"))}>Ent</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Em Produção" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.id, status: "Em Produção"}))}>Pro</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Em Transito" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.id, status: "Em Transito"}))}>Tra</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Entregue" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.id, status: "Entregue"}))}>Ent</button>
         </div>
       </div>
       

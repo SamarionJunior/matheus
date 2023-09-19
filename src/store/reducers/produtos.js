@@ -8,6 +8,8 @@ function insertNewProductsFromRequestToState(state, action) {
   // console.log(action.payload)
   const newProducts = action.payload.map(a => {a.id = a._id; return a})
   state.produtos = [...Object.assign([], newProducts)]
+  
+  console.log(state.produtos.filter(p => p.NosPedidos > 0)[0].status)
 }
 
 const produtos =  createSlice({
