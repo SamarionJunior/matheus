@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
@@ -10,10 +10,6 @@ import Item from './Item';
 const List = () => {
 
   const produtos = useSelector(selectors.getProdutos)
-  
-  // useEffect(() => {
-  //   console.log(produtos)
-  // }, [produtos])
 
   const newProdutos = produtos.filter(produto => produto.NosPedidos > 0)
 
