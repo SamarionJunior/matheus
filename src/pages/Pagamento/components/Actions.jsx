@@ -2,7 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
-import { addProductsToOrders, removeProductsFromPaymentArea } from '../../../store/fetchActions';
+import { addProductsToOrders } from '../../../store/fetchActions/order.js';
+import { removeProductsFromPaymentArea } from '../../../store/fetchActions/paymentarea.js';
 
 const Actions = () => {
 

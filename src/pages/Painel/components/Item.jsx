@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from "react-redux";
 
 import {ImageSmall} from '../../../components/Image';
-import { updateOrderStatusById } from '../../../store/fetchActions';
+import { updateOrderStatusById } from '../../../store/fetchActions/order.js';
 
 const Item = ({produto}) => {
 

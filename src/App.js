@@ -11,7 +11,7 @@ import Pedidos from './pages/Pedidos';
 import Estoque from './pages/Estoque';
 import Painel from './pages/Painel';
 import { useDispatch } from 'react-redux';
-import { getProductsList } from './store/fetchActions';
+import { getProductsList } from './store/fetchActions/products.js';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getProductsList())
-  }, [])
+  }, [dispatch])
 
   return (
     <Routes basename="/matheus">

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectors } from '../../../store/selectors/produtos';
 
 import {ImageSmall} from '../../../components/Image';
-import { addProductToShoppingCarById } from '../../../store/fetchActions';
+import { addProductToShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
 
 const Item = ({produto}) => {
 

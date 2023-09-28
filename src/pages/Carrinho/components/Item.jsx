@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from "react-redux";
 
 import {ImageSmall} from '../../../components/Image';
-import { addProductToShoppingCarById, deleteProductFromShoppingCarById, removeProductFromShoppingCarById } from '../../../store/fetchActions';
+import { addProductToShoppingCarById, deleteProductFromShoppingCarById, removeProductFromShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
 
 const Item = ({produto}) => {
 

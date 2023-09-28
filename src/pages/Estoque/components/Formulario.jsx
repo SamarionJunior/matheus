@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useDispatch } from "react-redux";
 
-import { createProductInProductsList } from '../../../store/fetchActions';
+import { createProductInProductsList } from '../../../store/fetchActions/products.js';
 
 const Formulario = () => {
 

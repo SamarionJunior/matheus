@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 
 import {ImageSmall} from '../../../components/Image';
-import { deleteProductById, updateProductById } from '../../../store/fetchActions';
+import { deleteProductById, updateProductById } from '../../../store/fetchActions/products.js';
 
 const Item = ({item}) => {
 
