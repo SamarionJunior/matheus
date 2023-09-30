@@ -20,7 +20,7 @@ const List = () => {
 
           {
             isNoCarrinho.length !== 0 ? 
-              isNoCarrinho.map(produto => (
+              isNoCarrinho?.map(produto => (
                 <Item produto={produto}/>
               )) :(
                 <Warning text={"Carrinho vazio!"}/>

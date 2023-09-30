@@ -11,7 +11,7 @@ const Estoque = ({items, component}) => {
       <div className='Lista ListaColumn'>
 
         {items.length !== 0 ?
-          items.map(item => 
+          items?.map(item => 
             cloneElement(component, {item: item, key: item.id})
           ) : <Warning text={"Nenhum produto no estoque"} newValue="20rem"/>}
 

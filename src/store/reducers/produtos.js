@@ -10,14 +10,15 @@ import {
 } from '../fetchActions/products.js'
 
 function insertNewProductsFromRequestToState(state, action) {
-  const newProducts = action.payload.map(a => {a.id = a._id; delete a._id; return a})
-  state.produtos = [...Object.assign([], newProducts)]
-  console.log(state.produtos)
+  const newProducts = action?.payload?.map(a => {a.id = a._id; delete a._id; return a})
+  // state = [...Object.assign([], newProducts)]
+  // console.log(state)
+  return [...Object.assign([], newProducts)]
 }
 
 const produtos =  createSlice({
     name: 'products',
-    initialState: INITIAL_STATE,
+    initialState: [],
     reducers: {},
     extraReducers: (builder) => {
       builder

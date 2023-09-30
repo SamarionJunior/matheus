@@ -22,7 +22,7 @@ const List = () => {
           
           <SelectPay/>
           {isEmProcessamento.length !== 0 ? 
-            isEmProcessamento.map(produto => (
+            isEmProcessamento?.map(produto => (
                 <Item produto={produto}/>
               )) : <Warning text={"Nenhum produto para pagamento"} newValue="20rem"/>
           }

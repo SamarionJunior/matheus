@@ -20,7 +20,7 @@ const List = () => {
           {
 
               produtos !== undefined && produtos.length !== 0 ? 
-                produtos.map(produto => (
+                produtos?.map(produto => (
                     <Item produto={produto} key={produto.id}/>
                 )) : (
                 <Warning text={"Nenhum produto no estoque"}/>

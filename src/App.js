@@ -10,8 +10,13 @@ import Pagamento from './pages/Pagamento';
 import Pedidos from './pages/Pedidos';
 import Estoque from './pages/Estoque';
 import Painel from './pages/Painel';
+
 import { useDispatch } from 'react-redux';
+
 import { getProductsList } from './store/fetchActions/products.js';
+import { getProductToShoppingCarById } from './store/fetchActions/shoppingcar.js';
+import { getProducsToPaymentArea } from './store/fetchActions/paymentarea.js';
+import { getProductsToOrders } from './store/fetchActions/order.js';
 
 function App() {
 
@@ -19,6 +24,9 @@ function App() {
 
   useEffect(() => {
     dispatch(getProductsList())
+    dispatch(getProductToShoppingCarById())
+    dispatch(getProducsToPaymentArea())
+    dispatch(getProductsToOrders())
   }, [dispatch])
 
   return (

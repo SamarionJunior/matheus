@@ -20,7 +20,7 @@ const List = () => {
       <div className="Lista ListaColumn">
 
         {isNosPedidos.length !== 0 ?
-          isNosPedidos.map(produto => (
+          isNosPedidos?.map(produto => (
             <Item produto={produto}/>
           )) : <Warning text={"Nenhum produto nos pedidos"}/>}
 

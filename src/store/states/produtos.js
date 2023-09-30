@@ -25,7 +25,10 @@ const INITIAL_STATE = {
         // {nome: "Produto 23", id: Math.random(), preco: 5, quantidade: 3, descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus augue, imperdiet vitae risus in, laoreet efficitur neque. Integer finibus convallis metus, non feugiat lorem posuere a.", noCarrinho: 5, emProcessoDePagamento: 5, NosPedidos: 5, status: "Em Produção"},
         // {nome: "Produto 24", id: Math.random(), preco: 3, quantidade: 5, descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus augue, imperdiet vitae risus in, laoreet efficitur neque. Integer finibus convallis metus, non feugiat lorem posuere a.", noCarrinho: 5, emProcessoDePagamento: 5, NosPedidos: 5, status: "Em Produção"},
         // {nome: "Produto 25", id: Math.random(), preco: 4, quantidade: 4, descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus augue, imperdiet vitae risus in, laoreet efficitur neque. Integer finibus convallis metus, non feugiat lorem posuere a.", noCarrinho: 5, emProcessoDePagamento: 5, NosPedidos: 5, status: "Em Produção"},
-    ]
+    ],
+    shoppingcar: [],
+    paymentarea: [],
+    order: []
 }
 
 export default INITIAL_STATE

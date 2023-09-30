@@ -20,7 +20,7 @@ const List = () => {
         <div className="Lista ListaColumn">
 
             {newProdutos.length !== 0 ? 
-                newProdutos.map(produto => 
+                newProdutos?.map(produto => 
                   <Item produto={produto} key={produto.id}/>
                 ) : (
                 <Warning text={"Nenhum produto no estoque"}/>

@@ -5,7 +5,7 @@ import api from '../../services/api';
 export const getProductToShoppingCarById = createAsyncThunk(
   'shoppingcar/getProductToShoppingCarById',
   async (id) => {
-    const response = await api.put('/shoppingcar/')
+    const response = await api.get('/shoppingcar/')
     return response.data.products
   }
 )
