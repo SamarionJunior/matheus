@@ -7,8 +7,12 @@ import Title from '../../components/Title';
 import Footer from '../../components/Footer';
 
 import List from './components/List';
+import { useSelector } from 'react-redux';
+import { selectors } from '../../store/selectors/produtos';
 
 const Pedidos = () => {
+
+  const produtos = useSelector(selectors.getOrder)
 
   return (
     <div>
@@ -17,7 +21,7 @@ const Pedidos = () => {
       
       <Title title={"Pedidos"}/>
 
-      <List/>
+      <List produtos={produtos}/>
 
       <Footer footer={"Footer"}/>
 

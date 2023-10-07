@@ -1,17 +1,12 @@
 import React from 'react';
-import { useSelector, useDispatch } from "react-redux";
-
-import { selectors } from '../../../store/selectors/produtos';
-import { addProductsToOrders } from '../../../store/fetchActions/order.js';
+import { useDispatch } from "react-redux";
+import { addProductsToOrders, getProductsToOrders } from '../../../store/fetchActions/order.js';
 import { removeProductsFromPaymentArea } from '../../../store/fetchActions/paymentarea.js';
+import { getProductToShoppingCar } from '../../../store/fetchActions/shoppingcar.js';
 
-const Actions = () => {
+const Actions = ({produtos}) => {
 
   const dispatch = useDispatch()
-
-  const produtos = useSelector(selectors.getProdutos)
-
-  const isEmProcessamento = produtos.filter(produto => produto.emProcessoDePagamento > 0)
 
   return (
 
@@ -20,9 +15,17 @@ const Actions = () => {
         <div className="Buttons">
 
           {
-            isEmProcessamento.length !== 0 ? (<>
-              <button onClick={e => dispatch(removeProductsFromPaymentArea(produtos))}>cancelar</button>
-              <button onClick={e => dispatch(addProductsToOrders(produtos))}>Pagar</button>
+            produtos.length !== 0 ? (<>
+              <button onClick={e => 
+                dispatch(removeProductsFromPaymentArea(produtos))
+                  .unwrap()
+                  .then(res => dispatch(getProductToShoppingCar()))
+              }>cancelar</button>
+              <button onClick={e => 
+                dispatch(addProductsToOrders(produtos))
+                  .unwrap()
+                  .then(res => dispatch(getProductsToOrders()))
+              }>Pagar</button>
             </>) : null
           }
 

@@ -1,13 +1,13 @@
 import {createSlice } from '@reduxjs/toolkit'
 
-import INITIAL_STATE from "../states/produtos"
+// import INITIAL_STATE from "../states/produtos"
 
 import {
-  getProductToShoppingCarById, 
+  getProductToShoppingCar, 
   addProductToShoppingCarById, 
+  removeProductFromShoppingCarById, 
   deleteAllProductsFromShoppingCar, 
   deleteProductFromShoppingCarById, 
-  removeProductFromShoppingCarById, 
 } from '../fetchActions/shoppingcar.js'
 
 function insertNewProductsFromRequestToState(state, action) {
@@ -24,7 +24,7 @@ const produtos =  createSlice({
     extraReducers: (builder) => {
       builder
         // SHOPPING CAR
-        .addCase(getProductToShoppingCarById.fulfilled, insertNewProductsFromRequestToState)
+        .addCase(getProductToShoppingCar.fulfilled, insertNewProductsFromRequestToState)
         .addCase(addProductToShoppingCarById.fulfilled, insertNewProductsFromRequestToState)
         .addCase(removeProductFromShoppingCarById.fulfilled, insertNewProductsFromRequestToState)
         .addCase(deleteProductFromShoppingCarById.fulfilled, insertNewProductsFromRequestToState)

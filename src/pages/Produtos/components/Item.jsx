@@ -1,22 +1,19 @@
 import '../style.css'
 
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { selectors } from '../../../store/selectors/produtos';
+// import { selectors } from '../../../store/selectors/produtos';
 
 import {ImageSmall} from '../../../components/Image';
 import { addProductToShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
+import { getProductsList } from '../../../store/fetchActions/products';
 
 const Item = ({produto}) => {
 
-  const produtos = useSelector(selectors.getProdutos)
+  // const produtos = useSelector(selectors.getProdutos)
 
   const dispatch = useDispatch()
-  
-  function click(){
-    console.log(produtos)
-  }
 
   return (
     <div className="Item ItemCollumn">
@@ -33,10 +30,15 @@ const Item = ({produto}) => {
             {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
           </div>
           <div className="ButtonsCarrinho">
-            <button className="ButtonCarrinho" onClick={() => click()}>Mais</button>
+            {/* <button className="ButtonCarrinho" onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>Mais</button> */}
+            <button className="ButtonCarrinho" onClick={e => console.log(produto)}>Mais</button>
             {produto.quantidade <= 0 ?
               <div className="ItemBodyWarning">(Produto esgotado)</div> : 
-              <button className="ButtonCarrinho" onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>Add</button>
+              <button className="ButtonCarrinho" onClick={e => {
+                dispatch(addProductToShoppingCarById(produto.id))
+                  .unwrap()
+                  .then(res => dispatch(getProductsList()))
+              }}>Add</button>
             }
           </div>
         </div>

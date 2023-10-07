@@ -13,18 +13,18 @@ const Item = ({produto}) => {
       <ImageSmall/>
       <div className="ItemBodyRow ItemBodyPainel">
         <div className="ItemBodyRowTitle ItemBodyPainelTitle">
-          <div className='ItemTitle ItemTitlePainel'>{produto.nome}</div>
+          <div className='ItemTitle ItemTitlePainel'>{produto.productId.nome}</div>
         </div>
         <div className="ItemBodyRowDescription ItemBodyPainelDescription">
-          <div className='ItemBodyText'>{produto.NosPedidos}</div>
+          <div className='ItemBodyText'>{produto.quantidade}</div>
         </div>
         <div className="ItemBodyRowDescription ItemBodyPainelDescription">
-          <div className='ItemBodyText'>{produto.status}</div>
+          <div className='ItemBodyText'>{produto.groupId.status}</div>
         </div>
         <div className='ItemBodyRowActions ItemBodyPainelActions'>
-          <button className={`ItemPainel-Actions ${produto.status === "Em Produção" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.id, status: "Em Produção"}))}>Pro</button>
-          <button className={`ItemPainel-Actions ${produto.status === "Em Transito" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.id, status: "Em Transito"}))}>Tra</button>
-          <button className={`ItemPainel-Actions ${produto.status === "Entregue" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.id, status: "Entregue"}))}>Ent</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Em Produção" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Em Produção"}))}>Pro</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Em Transito" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Em Transito"}))}>Tra</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Entregue" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Entregue"}))}>Ent</button>
         </div>
       </div>
       

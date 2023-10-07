@@ -3,15 +3,14 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { selectors } from '../../../store/selectors/produtos';
 import { addProducsToPaymentArea } from '../../../store/fetchActions/paymentarea.js';
-import { deleteAllProductsFromShoppingCar } from '../../../store/fetchActions/shoppingcar.js';
+import { deleteAllProductsFromShoppingCar, getProductToShoppingCar } from '../../../store/fetchActions/shoppingcar.js';
+import { getProductsList } from '../../../store/fetchActions/products';
 
 const Actions = () => {
 
   const dispatch = useDispatch()
 
   const produtos = useSelector(selectors.getProdutos)
-
-  const isNoCarrinho = produtos.filter(produto => produto.noCarrinho > 0);
 
   return (
 
@@ -20,9 +19,17 @@ const Actions = () => {
         <div className="Buttons">
 
           {
-            isNoCarrinho.length !== 0 ? (<>
-              <button onClick={e => dispatch(deleteAllProductsFromShoppingCar(produtos))}>limpar</button>
-              <button onClick={e => dispatch(addProducsToPaymentArea(produtos))}>comprar</button>
+            produtos.length !== 0 ? (<>
+              <button onClick={e => dispatch(
+                deleteAllProductsFromShoppingCar())
+                  .unwrap()
+                  .then(res => dispatch(getProductsList()))
+              }>limpar</button>
+              <button onClick={e => dispatch(
+                addProducsToPaymentArea())
+                  .unwrap()
+                  .then(res => dispatch(getProductToShoppingCar()))
+              }>comprar</button>
             </>) : null
           }
           

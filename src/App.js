@@ -14,7 +14,7 @@ import Painel from './pages/Painel';
 import { useDispatch } from 'react-redux';
 
 import { getProductsList } from './store/fetchActions/products.js';
-import { getProductToShoppingCarById } from './store/fetchActions/shoppingcar.js';
+import { getProductToShoppingCar } from './store/fetchActions/shoppingcar.js';
 import { getProducsToPaymentArea } from './store/fetchActions/paymentarea.js';
 import { getProductsToOrders } from './store/fetchActions/order.js';
 
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getProductsList())
-    dispatch(getProductToShoppingCarById())
+    dispatch(getProductToShoppingCar())
     dispatch(getProducsToPaymentArea())
     dispatch(getProductsToOrders())
   }, [dispatch])

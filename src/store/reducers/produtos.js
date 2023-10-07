@@ -1,18 +1,17 @@
 import {createSlice } from '@reduxjs/toolkit'
 
-import INITIAL_STATE from "../states/produtos"
+// import INITIAL_STATE from "../states/produtos"
 
 import {
-  createProductInProductsList, 
-  deleteProductById, 
-  getProductsList, 
+  getProductsList,
+  // getProductsListById,
+  createProductInProductsList,
+  deleteProductById,
   updateProductById
 } from '../fetchActions/products.js'
 
 function insertNewProductsFromRequestToState(state, action) {
   const newProducts = action?.payload?.map(a => {a.id = a._id; delete a._id; return a})
-  // state = [...Object.assign([], newProducts)]
-  // console.log(state)
   return [...Object.assign([], newProducts)]
 }
 
@@ -24,6 +23,7 @@ const produtos =  createSlice({
       builder
       // PRODUCTS LIST
         .addCase(getProductsList.fulfilled, insertNewProductsFromRequestToState)
+        // .addCase(getProductsListById.fulfilled, insertNewProductsFromRequestToState)
         .addCase(createProductInProductsList.fulfilled, insertNewProductsFromRequestToState)
         .addCase(updateProductById.fulfilled, insertNewProductsFromRequestToState)
         .addCase(deleteProductById.fulfilled, insertNewProductsFromRequestToState)

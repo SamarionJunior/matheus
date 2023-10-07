@@ -8,16 +8,16 @@ const Item = ({produto}) => {
         <ImageSmall/>
         <div className="ItemBodyRow ItemBodyPagamento">
           <div className="ItemBodyRowTitle ItemBodyPagamentoTitle">
-            <div className='ItemTitle ItemTitlePagamento'>{produto.nome}</div>
+            <div className='ItemTitle ItemTitlePagamento'>{produto.productId.nome}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyPagamentoDescription">
-            <div className='ItemBodyText'>QTD: {produto.emProcessoDePagamento}</div>
+            <div className='ItemBodyText'>QTD: {produto.quantidade}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyPagamentoDescription">
-            <div className='ItemBodyText'>PREÇO: {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+            <div className='ItemBodyText'>PREÇO: {produto.productId.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
           </div>
           <div className="ItemBodyRowDescription ItemBodyPagamentoDescription">
-            <div className='ItemBodyText'>TOTAL: {(produto.emProcessoDePagamento * produto.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
+            <div className='ItemBodyText'>TOTAL: {(produto.quantidade * produto.productId.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</div>
           </div>
         </div>
     </div>

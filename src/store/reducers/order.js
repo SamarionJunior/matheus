@@ -1,6 +1,6 @@
 import {createSlice } from '@reduxjs/toolkit'
 
-import INITIAL_STATE from "../states/produtos"
+// import INITIAL_STATE from "../states/produtos"
 
 import {
   getProductsToOrders, 
@@ -10,8 +10,10 @@ import {
 
 function insertNewProductsFromRequestToState(state, action) {
   const newProducts = action?.payload?.map(a => {a.id = a._id; delete a._id; return a})
-  // state = [...Object.assign([], newProducts)]
-  // console.log(state)
+  // newProducts.sort()
+  // newProducts.sort(function(a,b){
+  //   return new Date(b.groupId.createdAt) - new Date(a.date);
+  // });
   return [...Object.assign([], newProducts)]
 }
 

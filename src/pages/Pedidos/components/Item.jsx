@@ -9,13 +9,13 @@ const Item = ({produto}) => {
       <ImageSmall/>
       <div className="ItemBodyRow ItemBodyPedidos">
         <div className="ItemBodyRowTitle ItemBodyPedidosTitle">
-          <div className='ItemTitle ItemTitlePedidos'>{produto.nome}</div>
+          <div className='ItemTitle ItemTitlePedidos'>{produto.productId.nome}</div>
         </div>
         <div className="ItemBodyRowDescription ItemBodyPedidosDescription">
-          <div className='ItemBodyText'>QTD: {produto.NosPedidos}</div>
+          <div className='ItemBodyText'>QTD: {produto.quantidade}</div>
         </div>
         <div className="ItemBodyRowDescription ItemBodyPedidosDescription">
-          <div className='ItemBodyText'>{produto.status}</div>
+          <div className='ItemBodyText'>{produto.groupId.status}</div>
         </div>
       </div>
     </div>

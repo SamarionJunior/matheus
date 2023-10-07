@@ -9,6 +9,13 @@ export const getProductsList = createAsyncThunk(
       return response.data.products
     }
 )
+// export const getProductsListById = createAsyncThunk(
+//     'products/getProductsListById',
+//     async (id) => {
+//       const response = await api.get('/product/' + id)
+//       return response.data.products
+//     }
+// )
 export const createProductInProductsList = createAsyncThunk(
   'products/createProductInProductsList',
   async (product) => {

@@ -1,12 +1,15 @@
 const getProdutos = state => {
-    console.log(state)
-    console.log(state.produtos)
-    console.log(state.produtos.produtos)
     return state.produtos
 }
-const getShoppingCar = state => state.shoppingcar
-const getPaymentArea = state => state.paymentarea
-const getOrder = state => state.order
+const getShoppingCar = state => {
+    return state.shoppingcar
+}
+const getPaymentArea = state => {
+    return state.paymentarea
+}
+const getOrder = state => {
+    return state.order
+}
 
 // const getProductById = state => {
 //     const produtoss = state.produtos.produtos

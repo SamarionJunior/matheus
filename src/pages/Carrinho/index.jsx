@@ -10,7 +10,13 @@ import List from './components/List';
 import Actions from './components/Actions';
 import Total from './components/Total';
 
+import { useSelector } from 'react-redux';
+
+import { selectors } from '../../store/selectors/produtos';
+
 const Carrinho = () => {
+
+  const produtos = useSelector(selectors.getShoppingCar)
 
   return (
     <div>
@@ -19,7 +25,7 @@ const Carrinho = () => {
       
       <Title title={"Carrinho"}/>
 
-      <List/>
+      <List produtos={produtos}/>
 
       <Total/>
 

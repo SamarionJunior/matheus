@@ -9,8 +9,12 @@ import Footer from '../../components/Footer';
 import Actions from './components/Actions';
 import List from './components/List';
 import Total from '../Carrinho/components/Total';
+import { useSelector } from 'react-redux';
+import { selectors } from '../../store/selectors/produtos';
 
 const Pagamento = () => {
+
+  const produtos = useSelector(selectors.getPaymentArea)
 
   return (
     <div>
@@ -19,11 +23,11 @@ const Pagamento = () => {
       
       <Title title={"Pagamento"}/>
 
-      <List/>
+      <List produtos={produtos}/>
 
       <Total/>
 
-      <Actions/>
+      <Actions produtos={produtos}/>
 
       <Footer footer={"Footer"}/>
 
