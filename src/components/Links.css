@@ -1,15 +1,26 @@
+
 .Header{
   width: calc(100% - (100% - 1024px));
   height: 5rem;
+
   padding-left: calc((100% - 1024px) / 2);
   padding-right: calc((100% - 1024px) / 2);
+
+  background-color: transparent;
+
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border: none;
+	clear: both;
+
+  transition: all ease-in-out 0.3s;
 }
 
 @media (max-width: 1024px){
@@ -45,11 +56,19 @@
   min-width: 1024px;
   max-width: 1024px;
   height: 100%;
+
+  background-color: transparent;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+
+  border: none;
+	clear: both;
+
+  transition: all ease-in-out 0.3s;
 }
 
 @media (max-width: 1024px){
@@ -79,16 +98,41 @@
 }
   
 .Link{
+  width: 50px;
+  height: 50px;
+
+  margin-left: 10px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% / 6);
-  height: 100%;
+
+  background-color: transparent;
+
   text-align: center;
+
+  border: none;
+	clear: both;
   text-decoration: none;
   outline: none;
-  color: black;
+
+  transition: all ease-in-out 0.3s;
+}
+  
+.Link:hover{
+  background-color: black;
+}
+  
+.Link:active{
   background-color: transparent;
+}
+  
+.Link:hover > .ImagemLink{
+  filter: invert(1);
+}
+  
+.Link:active > .ImagemLink{
+  filter: invert(0);
 }
 
 @media (max-width: 1024px){
@@ -107,16 +151,19 @@
     
 }
 
-.Link:hover{
-  color: white;
-  background-color: black;
-  transition: all ease-in-out 0.3s;
-}
+.ImagemLink{
+  width: 40px;
+  height: 40px;
 
-.Link:active{
-  color: black;
   background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: all ease-in-out 0.3s;
+
+	clear: both;
 }
 
 @media (max-width: 1024px){
