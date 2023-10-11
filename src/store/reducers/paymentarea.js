@@ -1,6 +1,6 @@
 import {createSlice } from '@reduxjs/toolkit'
 
-import INITIAL_STATE from "../states/produtos"
+// import INITIAL_STATE from "../states/produtos"
 
 import {
   getProducsToPaymentArea, 

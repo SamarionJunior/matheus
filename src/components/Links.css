@@ -19,8 +19,10 @@
 
   border: none;
 	clear: both;
+}
 
-  transition: all ease-in-out 0.3s;
+.Header *{
+  transition: all ease-in-out 0.1s;
 }
 
 @media (max-width: 1024px){
@@ -67,8 +69,6 @@
 
   border: none;
 	clear: both;
-
-  transition: all ease-in-out 0.3s;
 }
 
 @media (max-width: 1024px){
@@ -101,7 +101,7 @@
   width: 50px;
   height: 50px;
 
-  margin-left: 10px;
+  /* margin-left: 10px; */
 
   display: flex;
   justify-content: center;
@@ -115,8 +115,6 @@
 	clear: both;
   text-decoration: none;
   outline: none;
-
-  transition: all ease-in-out 0.3s;
 }
   
 .Link:hover{
@@ -127,12 +125,12 @@
   background-color: transparent;
 }
   
-.Link:hover > .ImagemLink{
-  filter: invert(1);
+.Link:hover > .LinkIcon{
+  color: white;
 }
   
-.Link:active > .ImagemLink{
-  filter: invert(0);
+.Link:active > .LinkIcon{
+  color: black;
 }
 
 @media (max-width: 1024px){
@@ -151,19 +149,10 @@
     
 }
 
-.ImagemLink{
-  width: 40px;
-  height: 40px;
+.LinkIcon{
+  color: black;
 
-  background-color: transparent;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all ease-in-out 0.3s;
-
-	clear: both;
+  font-size: 3rem;
 }
 
 @media (max-width: 1024px){
