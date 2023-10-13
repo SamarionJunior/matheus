@@ -20,12 +20,16 @@ const Actions = ({produtos}) => {
                 dispatch(removeProductsFromPaymentArea(produtos))
                   .unwrap()
                   .then(res => dispatch(getProductToShoppingCar()))
-              }>cancelar</button>
+              }>
+                <i class="fa-solid fa-xmark"/>
+              </button>
               <button onClick={e => 
                 dispatch(addProductsToOrders(produtos))
                   .unwrap()
                   .then(res => dispatch(getProductsToOrders()))
-              }>Pagar</button>
+              }>
+                <i class="fa-solid fa-check"/>
+              </button>
             </>) : null
           }
 

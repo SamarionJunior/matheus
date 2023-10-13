@@ -22,9 +22,9 @@ const Item = ({produto}) => {
           <div className='ItemBodyText'>{produto.groupId.status}</div>
         </div>
         <div className='ItemBodyRowActions ItemBodyPainelActions'>
-          <button className={`ItemPainel-Actions ${produto.status === "Em Produção" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Em Produção"}))}>Pro</button>
-          <button className={`ItemPainel-Actions ${produto.status === "Em Transito" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Em Transito"}))}>Tra</button>
-          <button className={`ItemPainel-Actions ${produto.status === "Entregue" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Entregue"}))}>Ent</button>
+          <button className={`ItemPainel-Actions ${produto.status === "Em Produção" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Em Produção"}))}><i class="fa-solid fa-fire-burner"/></button>
+          <button className={`ItemPainel-Actions ${produto.status === "Em Transito" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Em Transito"}))}><i class="fa-solid fa-truck"/></button>
+          <button className={`ItemPainel-Actions ${produto.status === "Entregue" ? null : null}`} onClick={_ => dispatch(updateOrderStatusById({id: produto.groupId._id, status: "Entregue"}))}><i class="fa-solid fa-box"/></button>
         </div>
       </div>
       

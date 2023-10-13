@@ -24,12 +24,16 @@ const Actions = () => {
                 deleteAllProductsFromShoppingCar())
                   .unwrap()
                   .then(res => dispatch(getProductsList()))
-              }>limpar</button>
+              }>
+                <i class="fa-solid fa-broom"/>
+              </button>
               <button onClick={e => dispatch(
                 addProducsToPaymentArea())
                   .unwrap()
                   .then(res => dispatch(getProductToShoppingCar()))
-              }>comprar</button>
+              }>
+                <i class="fa-solid fa-money-bill"/>
+              </button>
             </>) : null
           }
           

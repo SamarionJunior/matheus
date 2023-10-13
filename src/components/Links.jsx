@@ -17,27 +17,27 @@ const Links = () => {
     <div className="Header">
       <div className='Links'>
           <Link className='Link' to="/matheus/Produtos">
-            <i className="fa-solid fa-house LinkIcon"></i>
+            <i className="fa-solid fa-house LinkIcon"/>
             {/* <img src={productPNG} className="ImagemLink" alt=''/> */}
           </Link>
           <Link className='Link' to="/matheus/Carrinho">
-            <i className="fa-solid fa-cart-shopping LinkIcon"></i>
+            <i className="fa-solid fa-cart-shopping LinkIcon"/>
             {/* <img src={shoppingCarPNG} className="ImagemLink" alt=''/> */}
           </Link>
           <Link className='Link' to="/matheus/Pagamento">
-            <i className="fa-solid fa-credit-card LinkIcon"></i>
+            <i className="fa-solid fa-credit-card LinkIcon"/>
             {/* <img src={paymentAreaPNG} className="ImagemLink" alt=''/> */}
           </Link>
           <Link className='Link' to="/matheus/Pedidos">
-            <i className="fa-solid fa-bag-shopping LinkIcon"></i>
+            <i className="fa-solid fa-bag-shopping LinkIcon"/>
             {/* <img src={ordersPNG} className="ImagemLink" alt=''/> */}
           </Link>
           <Link className='Link' to="/matheus/Estoque">
-            <i className="fa-solid fa-gear LinkIcon"></i>
+            <i className="fa-solid fa-gear LinkIcon"/>
             {/* <img src={panelPNG} className="ImagemLink" alt=''/> */}
           </Link>
           <Link className='Link' to="/matheus/Painel">
-            <i className="fa-solid fa-box LinkIcon"></i>
+            <i className="fa-solid fa-box LinkIcon"/>
             {/* <img src={stockPNG} className="ImagemLink" alt=''/> */}
           </Link>
           {/* <Link className='Link' to="/Produtos">Produtos</Link>

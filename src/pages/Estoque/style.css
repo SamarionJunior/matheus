@@ -189,8 +189,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   @media (max-width: 1024px){
@@ -207,8 +207,24 @@
     }
   }
 
-    .FormularioImput{
+    .inputs{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .buttons{
       width: 10%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .FormularioImput{
+      width: 100%;
       border-bottom: 3px solid black;
     }
 
@@ -219,22 +235,22 @@
       }
     }
   
-    .FormularioImput:first-child{
+    /* .FormularioImput:first-child{
       margin-right: 0;
     }
 
     .FormularioImputTitle{
       width: 55%;
-    }
+    } */
 
-    @media (max-width: 1024px){
+    /* @media (max-width: 1024px){
       .FormularioImputTitle{
         width: 100%;
       }
-    }
+    } */
 
     .FormularioImputButton{
-      width: 10%;
+      width: auto;
       background-color: transparent;
       border-bottom: none;
       font-weight: bolder;

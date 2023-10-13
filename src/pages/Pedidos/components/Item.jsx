@@ -15,7 +15,11 @@ const Item = ({produto}) => {
           <div className='ItemBodyText'>QTD: {produto.quantidade}</div>
         </div>
         <div className="ItemBodyRowDescription ItemBodyPedidosDescription">
-          <div className='ItemBodyText'>{produto.groupId.status}</div>
+          <div className='ItemBodyText'>
+            {produto.groupId.status === "Em Produção" ? <i class="fa-solid fa-fire-burner"/> : null}
+            {produto.groupId.status === "Em Transito" ? <i class="fa-solid fa-truck"/> : null}
+            {produto.groupId.status === "Entregue" ? <i class="fa-solid fa-box"/> : null}
+          </div>
         </div>
       </div>
     </div>

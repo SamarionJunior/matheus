@@ -30,19 +30,25 @@ const Item = ({produto}) => {
               dispatch(addProductToShoppingCarById(productId))
                 .unwrap()
                 .then(res => dispatch(getProductsList()))
-            }}>add</button>
+            }}>
+              <i class="fa-solid fa-plus"/>
+            </button>
             <button className='ItemCarrinho-Actions' onClick={e => {
               // console.log(productId); 
               dispatch(removeProductFromShoppingCarById(productId))
                 .unwrap()
                 .then(res => dispatch(getProductsList()))
-            }}>rm</button>
+            }}>
+              <i class="fa-solid fa-minus"/>
+            </button>
             <button className='ItemCarrinho-Actions' onClick={e => {
               // console.log(productId); 
               dispatch(deleteProductFromShoppingCarById(productId))
                 .unwrap()
                 .then(res => dispatch(getProductsList()))
-            }}>exc</button>
+            }}>
+              <i class="fa-solid fa-trash"/>
+            </button>
           </div>
         </div>
     </div>

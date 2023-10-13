@@ -39,15 +39,15 @@ const Item = ({item}) => {
                 <div className='ItemBodyRowActions ItemBodyEstoqueActions'>
                     {!isEdicaoHabilitada ? 
                         <>
-                            <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(true); adicinarEfeitoDeEdicao(true, id)}}>Hab</button>
-                            <button className='ItemEstoque-Button' disabled>Sal</button>
-                            <button className='ItemEstoque-Button' disabled>Apa</button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(true); adicinarEfeitoDeEdicao(true, id)}}><i class="fa-solid fa-lock"/></button>
+                            <button className='ItemEstoque-Button' disabled><i class="fa-solid fa-floppy-disk"/></button>
+                            <button className='ItemEstoque-Button' disabled><i class="fa-solid fa-trash"/></button>
                         </>
                             : 
                         <>
-                            <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(false); clear(); adicinarEfeitoDeEdicao(false, id)}}>Can</button>
-                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(updateProductById({id: id, nome: nome, quantidade: quantidade, preco: preco}))}}>Sal</button>
-                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(deleteProductById(id));}}>Apa</button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {setIsEdicaoHabilitada(false); clear(); adicinarEfeitoDeEdicao(false, id)}}><i class="fa-solid fa-lock-open"/></button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(updateProductById({id: id, nome: nome, quantidade: quantidade, preco: preco}))}}><i class="fa-solid fa-floppy-disk"/></button>
+                            <button className='ItemEstoque-Button' onClick={(e) => {dispatch(deleteProductById(id));}}><i class="fa-solid fa-trash"/></button>
                         </>
                     }
                 </div>

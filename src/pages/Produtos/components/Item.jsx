@@ -34,7 +34,7 @@ const Item = ({produto}) => {
           <div className="ButtonsCarrinho">
             {/* <button className="ButtonCarrinho" onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>Mais</button> */}
             <button className="ButtonCarrinho" onClick={e => console.log(produto)}>
-              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-eye"/>
               {/* <img src={shoppingCarPNG} alt=""/> */}
             </button>
             {produto.quantidade <= 0 ?
@@ -44,7 +44,7 @@ const Item = ({produto}) => {
                   .unwrap()
                   .then(res => dispatch(getProductsList()))
               }}>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus"/>
               </button>
             }
           </div>
