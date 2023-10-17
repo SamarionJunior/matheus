@@ -9,8 +9,6 @@ import {ImageSmall} from '../../../components/Image';
 import { addProductToShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
 import { getProductsList } from '../../../store/fetchActions/products';
 
-import shoppingCarPNG from "../../../assets/image/link/shoppingCar.png";
-
 const Item = ({produto}) => {
 
   // const produtos = useSelector(selectors.getProdutos)
