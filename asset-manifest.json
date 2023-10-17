@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/matheus/static/css/main.1eb3d6a4.css",
-    "main.js": "/matheus/static/js/main.48d561d6.js",
+    "main.js": "/matheus/static/js/main.5340c4a7.js",
     "static/media/shoppingCar.png": "/matheus/static/media/shoppingCar.e74f61edf5e0d2231aed.png",
     "index.html": "/matheus/index.html",
     "main.1eb3d6a4.css.map": "/matheus/static/css/main.1eb3d6a4.css.map",
-    "main.48d561d6.js.map": "/matheus/static/js/main.48d561d6.js.map"
+    "main.5340c4a7.js.map": "/matheus/static/js/main.5340c4a7.js.map"
   },
   "entrypoints": [
     "static/css/main.1eb3d6a4.css",
-    "static/js/main.48d561d6.js"
+    "static/js/main.5340c4a7.js"
   ]
 }
