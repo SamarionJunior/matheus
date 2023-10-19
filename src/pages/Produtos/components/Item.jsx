@@ -1,6 +1,6 @@
 import '../style.css'
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 
 // import { selectors } from '../../../store/selectors/produtos';
@@ -9,14 +9,19 @@ import {ImageSmall} from '../../../components/Image';
 import { addProductToShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
 import { getProductsList } from '../../../store/fetchActions/products';
 
+import View from './viewmore';
+
 const Item = ({produto}) => {
 
   // const produtos = useSelector(selectors.getProdutos)
 
   const dispatch = useDispatch()
 
+  const [isView, setIsView] = useState(false);
+
   return (
     <div className="Item ItemCollumn">
+    {isView ? <View produto={produto} setIsView={setIsView} isView={isView}/> : null}
       <ImageSmall/>
       <div className="ItemBodyRow ItemBodyRowProdutos">
         <div className="ItemBodyText">
@@ -31,7 +36,7 @@ const Item = ({produto}) => {
           </div>
           <div className="ButtonsCarrinho">
             {/* <button className="ButtonCarrinho" onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>Mais</button> */}
-            <button className="ButtonCarrinho" onClick={e => console.log(produto)}>
+            <button className="ButtonCarrinho" onClick={e => setIsView(!isView)}>
               <i class="fa-solid fa-eye"/>
               {/* <img src={shoppingCarPNG} alt=""/> */}
             </button>
