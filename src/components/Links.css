@@ -3,22 +3,18 @@
   width: calc(100% - (100% - 1024px));
   height: 5rem;
 
-  padding-left: calc((100% - 1024px) / 2);
-  padding-right: calc((100% - 1024px) / 2);
+  position: fixed;
+
+  top: 0;
+  left: calc((100% - 1024px) / 2);
+  
+  z-index: 901;
 
   background-color: transparent;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border: none;
-	clear: both;
 }
 
 .Header *{
@@ -27,17 +23,9 @@
 
 @media (max-width: 1024px){
   .Header{
-    width: calc(100%);
+    width: 100%;
     height: 5rem;
-    padding-left: 0;
-    padding-right: 0;
-    position: fixed;
-    top: 0;
     left: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -66,9 +54,6 @@
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
-
-  border: none;
-	clear: both;
 }
 
 @media (max-width: 1024px){
@@ -111,8 +96,6 @@
 
   text-align: center;
 
-  border: none;
-	clear: both;
   text-decoration: none;
   outline: none;
 }
