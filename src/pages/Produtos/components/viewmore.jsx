@@ -3,7 +3,7 @@ import '../style.css'
 import React from 'react';
 import { useDispatch } from "react-redux";
 
-import {ImageSmall, ImageMedium} from '../../../components/Image';
+import {ImageMedium} from '../../../components/Image';
 import { addProductToShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
 import { getProductsList } from '../../../store/fetchActions/products';
 
