@@ -1,11 +1,10 @@
 .contlCarrinho{
-  padding-bottom: 15rem;
   height: calc(100vh - 10rem - 15rem);
 }
 
 @media (max-width: 1024px){
   .contlCarrinho{
-    padding-bottom: 10rem;
+    left: 0;
     height: calc(100vh - 10rem - 10rem);
   }
   .ActionsCarrinho{

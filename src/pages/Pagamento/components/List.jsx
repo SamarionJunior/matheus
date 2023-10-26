@@ -12,11 +12,11 @@ const List = ({produtos}) => {
     <div className="contl contlPagamento">
 
         <div className="Lista ListaColumn">
-          
-          <SelectPay/>
           {produtos?.length !== 0 ? 
-            produtos?.map(produto => (
-              <Item produto={produto} key={produto.id}/>
+            produtos?.map(produto => (<>
+                <SelectPay/>
+                <Item produto={produto} key={produto.id}/>
+              </>
             )) : <Warning text={"Nenhum produto para pagamento"} newValue="20rem"/>
           }
         

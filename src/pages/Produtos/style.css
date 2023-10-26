@@ -4,7 +4,6 @@
 
 @media (max-width: 1024px){
     .contlProdutos{
-        width: 100%;
         left: 0;
         height: calc(100vh - 10rem);
     }
@@ -116,10 +115,67 @@
     align-items: center;
 }
 
-.View .ItemCollumn{
-    margin-top: 5rem;
-    width: 1024px;
+@media (max-width: 1024px){
+    .View{
+        padding: 0 1rem;
+        width: calc(100% - 2 * 1.0rem);
+    }
 }
+
+    .View .ItemCollumn{
+        margin-top: 5rem;
+        width: 1024px;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 1024px){
+        .View .ItemCollumn{
+            width: 100%;
+        }
+    }
+
+        .View .ItemCollumn > *{
+            margin-bottom: 2.5rem;
+        }
+
+        .View .ItemCollumn > *:last-child{
+            margin-bottom: 0;
+        }
+
+            .View .ItemBodyRowProdutos{
+                height: auto;
+            }
+
+            @media (max-width: 1024px){
+                .View .ItemBodyRowProdutos{
+                    width: 100%;
+                }
+            }
+
+                .View .ItemBodyDescription {
+                    display: initial;
+                    -webkit-line-clamp: initial;
+                    overflow: initial;
+                    -webkit-box-orient: initial;
+                }
+
+                .View .ItemBodyText > *{
+                    margin-bottom: 1rem;
+                }
+
+                .View .ItemBodyText > *:last-child{
+                    margin-bottom: 0;
+                }
+
+    .View .ItemCollumn > *{
+        margin-right: 0;
+    }
+
+    .View .ItemCollumn > *:last-child{
+        margin-right: 0;
+    }
 
     /* .ItemBodyFooter{
         height: 100%;

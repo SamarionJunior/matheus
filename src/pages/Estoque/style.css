@@ -1,13 +1,11 @@
 .contlEstoque{
-  padding-top: 20rem;
-  padding-bottom: 5rem;
+  top: 22.5rem;
   height: calc(100vh - 20rem - 5rem);
 }
 
 @media (max-width: 1024px){
   .contlEstoque{
-    padding-top: 20rem;
-    padding-bottom: 0rem;
+    left: 0;
     height: calc(100vh - 20rem);
   }
 }
@@ -228,12 +226,11 @@
       border-bottom: 3px solid black;
     }
 
-    @media (max-width: 1024px){
+    /* @media (max-width: 1024px){
       .FormularioImput{
-        width: calc(50% - 1rem);
         border-bottom: 3px solid black;
       }
-    }
+    } */
   
     /* .FormularioImput:first-child{
       margin-right: 0;

@@ -3,15 +3,12 @@
 }
 
 .contlPainel{
-  padding-top: 10rem;
-  padding-bottom: 5rem;
   height: calc(100vh - 10rem - 5rem);
 }
 
 @media (max-width: 1024px){
   .contlPainel{
-    padding-top: 10rem;
-    padding-bottom: 0rem;
+    left: 0;
     height: calc(100vh - 10rem);
   }
 }

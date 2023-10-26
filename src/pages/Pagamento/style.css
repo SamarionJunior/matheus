@@ -1,13 +1,10 @@
 .contlPagamento{
-  padding-top: 10rem;
-  padding-bottom: 15rem;
   height: calc(100vh - 10rem - 15rem);
 }
 
 @media (max-width: 1024px){
   .contlPagamento{
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    left: 0;
     height: calc(100vh - 10rem - 10rem);
   }
   .ActionsPagamento{
