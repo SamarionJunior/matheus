@@ -123,10 +123,11 @@
 }
 
     .View .ItemCollumn{
-        margin-top: 5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         width: 1024px;
         flex-direction: column;
-        height: 100%;
+        height: calc(100% - 2rem);
         margin-bottom: 0;
     }
 
@@ -145,7 +146,7 @@
         }
 
             .View .ItemBodyRowProdutos{
-                height: auto;
+                flex-grow: 1;
             }
 
             @media (max-width: 1024px){
@@ -161,13 +162,30 @@
                     -webkit-box-orient: initial;
                 }
 
-                .View .ItemBodyText > *{
-                    margin-bottom: 1rem;
+                    .View .ItemBodyText > *{
+                        margin-bottom: 1rem;
+                    }
+
+                    .View .ItemBodyText > *:last-child{
+                        margin-bottom: 0;
+                    }
+
+                .View .ButtonsCarrinho {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: flex-end;
                 }
 
-                .View .ItemBodyText > *:last-child{
-                    margin-bottom: 0;
-                }
+                    .View .ButtonsCarrinho > *{
+                        width: calc(50% - 0.5rem);
+                        height: 5rem;
+                        background-color: black;
+                        color: white;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
 
     .View .ItemCollumn > *{
         margin-right: 0;

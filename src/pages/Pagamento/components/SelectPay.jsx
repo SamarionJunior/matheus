@@ -73,7 +73,7 @@ const SelectPay = () => {
         :
           <div className="WarningPagamento">
             <p>Recebar seu pedido nesse endereço:</p>
-            <p>Recebar seu pedido nesse endereço:</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deserunt recusandae quasi quas debitis, obcaecati perspiciatis non aperiam aliquam odio ad libero quis, excepturi veritatis itaque nam autem, vel ea.</p>
           </div>
         }
 

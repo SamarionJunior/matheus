@@ -10,14 +10,15 @@ const List = ({produtos}) => {
   return (
 
     <div className="contl contlPagamento">
+        {produtos?.length !== 0 ? 
+          <SelectPay/> : null
+        }
 
         <div className="Lista ListaColumn">
           {produtos?.length !== 0 ? 
-            produtos?.map(produto => (<>
-                <SelectPay/>
-                <Item produto={produto} key={produto.id}/>
-              </>
-            )) : <Warning text={"Nenhum produto para pagamento"} newValue="20rem"/>
+            produtos?.map(produto => (
+              <Item produto={produto} key={produto.id}/>
+            )) : <Warning text={"Nenhum produto para pagamento"} newValue="10rem"/>
           }
         
         </div>

@@ -5,10 +5,10 @@ import React from 'react';
 import Links from '../../components/Links';
 import Title from '../../components/Title';
 import Footer from '../../components/Footer';
+import Total from '../../components/Total';
 
 import List from './components/List';
 import Actions from './components/Actions';
-import Total from './components/Total';
 
 import { useSelector } from 'react-redux';
 
@@ -27,7 +27,7 @@ const Carrinho = () => {
 
       <List produtos={produtos}/>
 
-      <Total/>
+      <Total produtos={produtos}/>
 
       <Actions/>
 

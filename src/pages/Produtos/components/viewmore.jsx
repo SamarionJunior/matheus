@@ -7,9 +7,16 @@ import {ImageMedium} from '../../../components/Image';
 import { addProductToShoppingCarById } from '../../../store/fetchActions/shoppingcar.js';
 import { getProductsList } from '../../../store/fetchActions/products';
 
+
 const View = ({produto, setIsView, isView}) => {
 
   const dispatch = useDispatch()
+
+  const handleButtonPlus = e => {
+    dispatch(addProductToShoppingCarById(produto.id))
+        .unwrap()
+        .then(res => dispatch(getProductsList()))
+  }
 
   return (
     <div className="View">
@@ -27,20 +34,15 @@ const View = ({produto, setIsView, isView}) => {
                         {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}
                     </div>
                     <div className="ButtonsCarrinho">
-                        {/* <button className="ButtonCarrinho" onClick={e => dispatch(addProductToShoppingCarById(produto.id))}>Mais</button> */}
                         <button className="ButtonCarrinho" onClick={e => setIsView(!isView)}>
-                        <i class="fa-solid fa-eye"/>
-                        {/* <img src={shoppingCarPNG} alt=""/> */}
+                            <i class="fa-solid fa-arrow-left"/>
                         </button>
                         {produto.quantidade <= 0 ?
-                        <div className="ItemBodyWarning">(Produto esgotado)</div> : 
-                        <button className="ButtonCarrinho" onClick={e => {
-                            dispatch(addProductToShoppingCarById(produto.id))
-                            .unwrap()
-                            .then(res => dispatch(getProductsList()))
-                        }}>
-                            <i class="fa-solid fa-plus"/>
-                        </button>
+                            <div className="ItemBodyWarning">(Produto esgotado)</div>
+                            : 
+                            <button className="ButtonCarrinho" onClick={handleButtonPlus}>
+                                <i class="fa-solid fa-plus"/>
+                            </button>
                         }
                     </div>
                 </div>
